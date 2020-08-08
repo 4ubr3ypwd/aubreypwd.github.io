@@ -3,12 +3,12 @@
   <channel>
     <title>Posts on aubreypwd</title>
     <link>https://aubreypwd.github.io/posts/</link>
-    <description>aubreypwd (Posts)</description>
+    <description>Recent content in Posts on aubreypwd</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Aug 2020 12:28:58 -0600</lastBuildDate>
     
-    <atom:link href="https://aubreypwd.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aubreypwd.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,7 @@
       <pubDate>Sat, 08 Aug 2020 12:28:58 -0600</pubDate>
       
       <guid>https://aubreypwd.github.io/posts/my-first-post/</guid>
-      <description>&lt;p&gt;Something cool?&lt;/p&gt;
-</description>
+      <description>Something cool?</description>
     </item>
     
   </channel>
