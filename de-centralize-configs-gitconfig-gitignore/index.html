@@ -53,7 +53,7 @@ As you can see I currently have these housed in a giant Git repository in my ~/.
 Today I focused on my .gitconfig and .gitignore files as an experiment with just my &ldquo;dot-files&rdquo;, and this is what I&rsquo;ve come up with:">
 <meta itemprop="datePublished" content="2020-09-18T12:28:58-06:00" />
 <meta itemprop="dateModified" content="2020-09-18T12:28:58-06:00" />
-<meta itemprop="wordCount" content="369">
+<meta itemprop="wordCount" content="348">
 <meta itemprop="image" content="https://aubreypwd.com"/>
 
 
@@ -159,27 +159,16 @@ Today I focused on my .gitconfig and .gitignore files as an experiment with just
 <p><a href="/images/greenshot-2020-09-18-184905.png"><img src="/images/greenshot-2020-09-18-184905.png" alt="Screenshot of my current .config"></a></p>
 <p>As you can see I currently have these housed in a giant Git repository in my <code>~/.config/</code>. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.</p>
 <p>Today I focused on my <code>.gitconfig</code> and <code>.gitignore</code> files as an experiment with just my &ldquo;dot-files&rdquo;, and this is what I&rsquo;ve come up with:</p>
-<p>First, I found out you can import another config file for git using:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[include]</span>
-    <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">~/.composer/vendor/aubreypwd/gitconfig/.gitconfig</span>
-</code></pre></div><p>&hellip;so this gave me an opporitunity to store this file somewhere else (on it&rsquo;s own) and require it in a way.</p>
-<p>Also you could do the same with your <code>.gitignore</code> file, using:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[core]</span>
-    <span style="color:#a6e22e">excludesfile</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/Users/aubreypwd/.gitignore</span>
-</code></pre></div><p>So I wantedo to figure out what package manager is going to best serve me here. After looking at a lot of them, e.g. npm, bpkg, composer, and a slew of others, I settled on spamming Composer. I know my &ldquo;packages&rdquo; are not PHP, but Composer doesn&rsquo;t care about that, plus of all the package managers it&rsquo;s the easiest to install with git repo support (try doing that with npm or other package managers out there), it manages them well in a reliable location, and on top of that with <code>composer-installers</code> I think I can do some really cool magic later on&hellip;</p>
+<p>So I wantedo to figure out what package manager is going to best serve me here. After looking at a lot of them, e.g. npm, bpkg, composer, and a slew of others, I settled on spamming Composer. I know my &ldquo;packages&rdquo; are not PHP, but Composer doesn&rsquo;t care about that, plus of all the package managers it&rsquo;s the easiest to install with git repo support (try doing that with npm or other package managers out there), it manages them well in a reliable location, and on top of that with <code>composer-installers</code> I think I can do some really cool magic later on&hellip;</p>
 <p>So I settled on Composer, hate me.</p>
 <p>So first I got my <code>.gitignore</code> and <code>.gitconfig</code> files into their own packages:</p>
 <ul>
 <li><a href="https://github.com/aubreypwd/.gitconfig">https://github.com/aubreypwd/.gitconfig</a></li>
 <li><a href="https://github.com/aubreypwd/.gitignore">https://github.com/aubreypwd/.gitignore</a></li>
 </ul>
-<p>&hellip;that I could now easliy install to a reliable place, <code>~/.composer</code> and with our require-like snippets above in a <code>~/.gitconfig</code> file that now looks like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[include]</span>
-    <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">~/.composer/vendor/aubreypwd/gitconfig/.gitconfig</span>
-<span style="color:#66d9ef">[core]</span>
-    <span style="color:#a6e22e">excludesfile</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">~/.composer/vendor/aubreypwd/gitignore/.gitignore</span>
-</code></pre></div><p>&hellip;I can now both track my changes to these two dotfiles easily.</p>
-<p>The last thing I did was created a main <a href="https://github.com/aubreypwd/git"><code>git</code> package</a> I could install both of these easily. I plan, as I build out more git related config files and shell commands they will all be required at this package&rsquo;s level that way I can just keep it up to date.</p>
+<p>&hellip;that I could now easliy install to a reliable place, <code>~/.composer</code>. Both packages automatically symlink my <code>~/.gitconfig|ignore</code> file for me using the <a href="https://packagist.org/packages/sioweb/ccevent"><code>/sioweb/ccevent</code></a> package. Even if you supply, e.g. a <code>post-package-install</code> script for the package, because you install it as a dependancy those scripts to not fire. But this package, when installed along side it, will look for <code>package-scripts</code> and run those, so I was able to add that to both packages and when you install them that automatically runs and runs a <code>symlink.sh</code> script.</p>
+<p>This symlinking solution on install is great because once I install one of these packages, it symlinks my dot-file in <code>$HOME</code> for me, vs me having to do it manually.</p>
+<p>So now I can install dot-files individually and I can automate symlinking them!</p>
 <p>I&rsquo;m very curious how the rest of this experiment is going to go&hellip;</p>
 
       </div>
@@ -195,7 +184,7 @@ Today I focused on my .gitconfig and .gitignore files as an experiment with just
           <line x1="16" y1="17" x2="8" y2="17"></line>
           <polyline points="10 9 9 9 8 9"></polyline>
         </svg>
-        369 Words
+        348 Words
       </p>
 
       <p>
