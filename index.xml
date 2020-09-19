@@ -6,22 +6,10 @@
     <description>Recent content on Aubrey Portwood</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2020 12:28:58 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2020 12:28:58 -0600</lastBuildDate>
     
 	<atom:link href="https://aubreypwd.com/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>De-centralizing my system configurations.</title>
-      <link>https://aubreypwd.com/installable-configs/</link>
-      <pubDate>Fri, 18 Sep 2020 12:28:58 -0600</pubDate>
-      
-      <guid>https://aubreypwd.com/installable-configs/</guid>
-      <description>Today I did some experimenting. You see my system is entirely customized to be super-efficient and automated.
-
-As you can see I currently have these housed in a giant Git repository in my ~/.config/. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.
-Today I focused on my .gitconfig and .gitignore files as an experiment with just my &amp;ldquo;dot-files&amp;rdquo;, and this is what I&amp;rsquo;ve come up with:</description>
-    </item>
     
     <item>
       <title>Hello World</title>
@@ -43,6 +31,19 @@ Today I focused on my .gitconfig and .gitignore files as an experiment with just
  Traditionally, the words for the four primary virtues of Stoicism are:
  Wisdom Justice Courage Temperance  If you’re about to do a thing, you ask yourself:
  Am I being Wise? Am I being Just? Am I being Courageous? Am I being Temperate?  But, none of these words have ever really meant much for me.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aubreypwd.com/installable-configs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/installable-configs/</guid>
+      <description>title: &amp;ldquo;De-centralizing my system configurations.&amp;rdquo; date: 2020-09-18T12:28:58-06:0
+Today I did some experimenting. You see my system is entirely customized to be super-efficient and automated.
+
+As you can see I currently have these housed in a giant Git repository in my ~/.config/. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.
+Today I focused on my .</description>
     </item>
     
   </channel>
