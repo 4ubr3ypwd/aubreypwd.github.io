@@ -40,7 +40,7 @@ Today I focused on my .gitconfig and .gitignore files as an experiment with just
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[include]</span>
     <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">~/.composer/vendor/aubreypwd/gitconfig/.gitconfig</span>
 <span style="color:#66d9ef">[core]</span>
-    <span style="color:#a6e22e">excludesfile</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/.composer/vendor/aubreypwd/gitignore/.gitignore</span>
+    <span style="color:#a6e22e">excludesfile</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">~/.composer/vendor/aubreypwd/gitignore/.gitignore</span>
 </code></pre></div><p>&hellip;I can now both track my changes to these two dotfiles easily.</p>
 <p>The last thing I did was created a main <a href="https://github.com/aubreypwd/git"><code>git</code> package</a> I could install both of these easily. I plan, as I build out more git related config files and shell commands they will all be required at this package&rsquo;s level that way I can just keep it up to date.</p>
 <p>I&rsquo;m very curious how the rest of this experiment is going to go&hellip;</p>
