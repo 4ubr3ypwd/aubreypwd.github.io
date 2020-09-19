@@ -5,8 +5,47 @@
         <description>Recent content in Posts on Aubrey Portwood</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 08 Aug 2020 12:28:58 -0600</lastBuildDate>
+        <lastBuildDate>Fri, 18 Sep 2020 12:28:58 -0600</lastBuildDate>
         <atom:link href="https://aubreypwd.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>De-centralizing my system configurations: gitignore and gitconfig.</title>
+            <link>https://aubreypwd.com/de-centralize-configs-gitconfig-gitignore/</link>
+            <pubDate>Fri, 18 Sep 2020 12:28:58 -0600</pubDate>
+            
+            <guid>https://aubreypwd.com/de-centralize-configs-gitconfig-gitignore/</guid>
+            <description>Today I did some experimenting. You see my system is entirely customized to be super-efficient and automated.
+
+As you can see I currently have these housed in a giant Git repository in my ~/.config/. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.
+Today I focused on my .gitconfig and .gitignore files as an experiment with just my &amp;ldquo;dot-files&amp;rdquo;, and this is what I&amp;rsquo;ve come up with:</description>
+            <content type="html"><![CDATA[<p>Today I did some experimenting. You see my system is entirely customized to be super-efficient and automated.</p>
+<p><a href="/images/greenshot-2020-09-18-184905.png"><img src="/images/greenshot-2020-09-18-184905.png" alt="Screenshot of my current .config"></a></p>
+<p>As you can see I currently have these housed in a giant Git repository in my <code>~/.config/</code>. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.</p>
+<p>Today I focused on my <code>.gitconfig</code> and <code>.gitignore</code> files as an experiment with just my &ldquo;dot-files&rdquo;, and this is what I&rsquo;ve come up with:</p>
+<p>First, I found out you can import another config file for git using:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[include]</span>
+    <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">~/.composer/vendor/aubreypwd/gitconfig/.gitconfig</span>
+</code></pre></div><p>&hellip;so this gave me an opporitunity to store this file somewhere else (on it&rsquo;s own) and require it in a way.</p>
+<p>Also you could do the same with your <code>.gitignore</code> file, using:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[core]</span>
+    <span style="color:#a6e22e">excludesfile</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/Users/aubreypwd/.gitignore</span>
+</code></pre></div><p>So I wantedo to figure out what package manager is going to best serve me here. After looking at a lot of them, e.g. npm, bpkg, composer, and a slew of others, I settled on spamming Composer. I know my &ldquo;packages&rdquo; are not PHP, but Composer doesn&rsquo;t care about that, plus of all the package managers it&rsquo;s the easiest to install with git repo support (try doing that with npm or other package managers out there), it manages them well in a reliable location, and on top of that with <code>composer-installers</code> I think I can do some really cool magic later on&hellip;</p>
+<p>So I settled on Composer, hate me.</p>
+<p>So first I got my <code>.gitignore</code> and <code>.gitconfig</code> files into their own packages:</p>
+<ul>
+<li><a href="https://github.com/aubreypwd/.gitconfig">https://github.com/aubreypwd/.gitconfig</a></li>
+<li><a href="https://github.com/aubreypwd/.gitignore">https://github.com/aubreypwd/.gitignore</a></li>
+</ul>
+<p>&hellip;that I could now easliy install to a reliable place, <code>~/.composer</code> and with our require-like snippets above in a <code>~/.gitconfig</code> file that now looks like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[include]</span>
+    <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">~/.composer/vendor/aubreypwd/gitconfig/.gitconfig</span>
+<span style="color:#66d9ef">[core]</span>
+    <span style="color:#a6e22e">excludesfile</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/.composer/vendor/aubreypwd/gitignore/.gitignore</span>
+</code></pre></div><p>&hellip;I can now both track my changes to these two dotfiles easily.</p>
+<p>The last thing I did was created a main <a href="https://github.com/aubreypwd/git"><code>git</code> package</a> I could install both of these easily. I plan, as I build out more git related config files and shell commands they will all be required at this package&rsquo;s level that way I can just keep it up to date.</p>
+<p>I&rsquo;m very curious how the rest of this experiment is going to go&hellip;</p>
+]]></content>
+        </item>
         
         <item>
             <title>Hello World</title>
@@ -173,48 +212,6 @@
 <p style="text-align: center;">Find truth, serve others, be fearless, and detach!</p>
 <!-- /wp:paragraph -->
 <p>&nbsp;</p>
-]]></content>
-        </item>
-        
-        <item>
-            <title></title>
-            <link>https://aubreypwd.com/installable-configs/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            
-            <guid>https://aubreypwd.com/installable-configs/</guid>
-            <description>title: &amp;ldquo;De-centralizing my system configurations.&amp;rdquo; date: 2020-09-18T12:28:58-06:0
-Today I did some experimenting. You see my system is entirely customized to be super-efficient and automated.
-
-As you can see I currently have these housed in a giant Git repository in my ~/.config/. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.
-Today I focused on my .</description>
-            <content type="html"><![CDATA[<p>title: &ldquo;De-centralizing my system configurations.&rdquo;
-date: 2020-09-18T12:28:58-06:0</p>
-<p>Today I did some experimenting. You see my system is entirely customized to be super-efficient and automated.</p>
-<p><a href="/images/greenshot-2020-09-18-184905.png"><img src="/images/greenshot-2020-09-18-184905.png" alt="Screenshot of my current .config"></a></p>
-<p>As you can see I currently have these housed in a giant Git repository in my <code>~/.config/</code>. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.</p>
-<p>Today I focused on my <code>.gitconfig</code> and <code>.gitignore</code> files as an experiment with just my &ldquo;dot-files&rdquo;, and this is what I&rsquo;ve come up with:</p>
-<p>First, I found out you can import another config file for git using:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[include]</span>
-    <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">~/.composer/vendor/aubreypwd/gitconfig/.gitconfig</span>
-</code></pre></div><p>&hellip;so this gave me an opporitunity to store this file somewhere else (on it&rsquo;s own) and require it in a way.</p>
-<p>Also you could do the same with your <code>.gitignore</code> file, using:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[core]</span>
-    <span style="color:#a6e22e">excludesfile</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/Users/aubreypwd/.gitignore</span>
-</code></pre></div><p>So I wante do to figure out what package manager is going to best serve me here. After looking at a lot of them, e.g. npm, bpkg, composer, and a slew of others, I settled on spamming Composer. I know my &ldquo;packages&rdquo; are not PHP, but Composer doesn&rsquo;t care about that, plus of all the package managers it&rsquo;s the easiest to install with git repo support (try doing that with npm or other package managers out there), it manages them well in a reliable location, and on top of that with <code>composer-installers</code> I think I can do some really cool magic later on&hellip;</p>
-<p>So I settled on Composer, hate me.</p>
-<p>So first I got my <code>.gitignore</code> and <code>.gitconfig</code> files into their own packages:</p>
-<ul>
-<li><a href="https://github.com/aubreypwd/.gitconfig">https://github.com/aubreypwd/.gitconfig</a></li>
-<li><a href="https://github.com/aubreypwd/.gitignore">https://github.com/aubreypwd/.gitignore</a></li>
-</ul>
-<p>&hellip;that I could now easliy install to a reliable place, <code>~/.composer</code> and with our require-like snippets above in a <code>~/.gitconfig</code> file that now looks like:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#66d9ef">[include]</span>
-    <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">~/.composer/vendor/aubreypwd/gitconfig/.gitconfig</span>
-<span style="color:#66d9ef">[core]</span>
-    <span style="color:#a6e22e">excludesfile</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/.composer/vendor/aubreypwd/gitignore/.gitignore</span>
-</code></pre></div><p>&hellip;I can now both track my changes to these two dotfiles easily.</p>
-<p>The last thing I did was created a main <a href="https://github.com/aubreypwd/git"><code>git</code> package</a> I could install both of these easily. I plan, as I build out more git related config files and shell commands they will all be required at this package&rsquo;s level that way I can just keep it up to date.</p>
-<p>I&rsquo;m very curious how the rest of this experiment is going to go&hellip;</p>
 ]]></content>
         </item>
         
