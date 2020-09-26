@@ -6,10 +6,21 @@
     <description>Recent content on Aubrey Portwood</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2020 12:28:58 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2020 03:17:00 -0600</lastBuildDate>
     
 	<atom:link href="https://aubreypwd.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Stoic Five-minute Journal</title>
+      <link>https://aubreypwd.com/stoic-five-minute-journal/</link>
+      <pubDate>Sat, 26 Sep 2020 03:17:00 -0600</pubDate>
+      
+      <guid>https://aubreypwd.com/stoic-five-minute-journal/</guid>
+      <description>So the last month or so I&amp;rsquo;ve been journaling a little bit different. A while go, I ran across a video that went over the idea of the Five Minute Journal, and I was intrigued.
+The idea is you answer a few simple prompts:
+ I am grateful for: What would make today great? Daily affirmation. I am: 3 Amazing things that happened today: How could I have made today even better:  &amp;hellip;and I did that for about a week before I felt it lacked a Stoic-seasoning, and so I worked and re-worked that format until I landed on a format that has both accomplish the goal of making journaling a little easier and getting your Stoic practice in.</description>
+    </item>
     
     <item>
       <title>De-centralizing my system configurations: dotfiles</title>
