@@ -6,10 +6,21 @@
     <description>Recent content on Aubrey Portwood</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Sep 2020 03:17:00 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://aubreypwd.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>WebDevStudios Coding Standards&lt;br&gt;Office Hours: 9/28/2020</title>
+      <link>https://aubreypwd.com/wds-cs-office-hours-9-28/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/wds-cs-office-hours-9-28/</guid>
+      <description>To catch everyone up, our initiative to publish wd_s soon raised the priority of getting coding standards caught up, specifically around:
+ Prettier Integration Support for @wordpress/scripts Husky Integration  See WebDevStudios/wd_s/issues/548 for more information.
+TLDR  JavaScript Coding Standards 1.2.0 was released with Prettier support! Found that somehow getting prettier to work with PHP is going to be a bit complicated, since the plugin is not a composer package  Notes Integrating Prettier with JS Last Friday I worked on Prettier integration with JS Coding Standards&amp;hellip;</description>
+    </item>
     
     <item>
       <title>My Stoic Five-minute Journal</title>
