@@ -34,7 +34,7 @@ TLDR  JavaScript Coding Standards 1.2.0 was released with Prettier support! Foun
 <p>Last Friday I worked on Prettier integration with JS Coding Standards&hellip;</p>
 <ul>
 <li>Published the new <a href="https://www.npmjs.com/package/@webdevstudios/prettier-config-js-coding-standards">WebDeStudios Prettier Shared Configurations</a></li>
-<li><a href="https://github.com/WebDevStudios/js-coding-standards/pull/12/files">Installed the new package on <code>@webdevstudios/js-coding-standards</code></a> for the next RELEASE</li>
+<li><a href="https://github.com/WebDevStudios/js-coding-standards/pull/12/files">Installed the new package on @webdevstudios/js-coding-standards</a> for the next RELEASE</li>
 <li>Gave this a quick test on the <a href="https://github.com/WebDevStudios/coding-standards-example-project">example project</a>, and it worked!</li>
 <li>Considered using <code>^</code> ranges for sub-packages of <code>js-coding-standards</code>, but came up with <a href="https://github.com/WebDevStudios/js-coding-standards/wiki/Understanding-Dependency-Hierarchy#use--ranges">why we shouldn&rsquo;t do that</a></li>
 <li>Release <a href="https://www.npmjs.com/package/@webdevstudios/js-coding-standards">1.2.0 of js-coding-standards</a> with prettier support on npmjs.org</li>
