@@ -5,8 +5,59 @@
         <description>Recent content in Posts on Aubrey Portwood</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
         <atom:link href="https://aubreypwd.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Sublime hangs (beachball) on save [Fix]</title>
+            <link>https://aubreypwd.com/sublime-file-hangs-on-save/</link>
+            <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+            
+            <guid>https://aubreypwd.com/sublime-file-hangs-on-save/</guid>
+            <description>So, the last few weeks I&amp;rsquo;ve had a thing happen since switching to a MacBook Air recently. Since the CPU is not up to snuff as my old MacBook Pro (more to come on this switch later ⌨️), Sublime Text would hang for about a second on save of a file in a large project.
+This likely went un-notice on my 2.7Ghz MacBook Pro, but started to notice it on my Air.</description>
+            <content type="html"><![CDATA[<p>So, the last few weeks I&rsquo;ve had a thing happen since switching to a MacBook Air recently. Since the CPU is not up to snuff as my old MacBook Pro (more to come on this switch later ⌨️), Sublime Text would hang for about a second on save of a file in a large project.</p>
+<p>This likely went un-notice on my 2.7Ghz MacBook Pro, but started to notice it on my Air. Turns out it was because Sublime was indexing all the various <code>node_modules/**</code> in all the various folders it was in, on save.</p>
+<p>So I had to figure out a way to <em>not</em> index files, yet leave them in my sidebar (I want them there).</p>
+<p>According to <a href="https://stackoverflow.com/a/40028043/1436129">this</a> to tell Sublime <em>not</em> to index a file, yet leave it in the Sidebar you have to adjust <code>binary_file_patterns</code> in your user settings, like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;binary_file_patterns&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>
+[
+    <span style="color:#e6db74">&#34;*.jpg&#34;</span>,
+    <span style="color:#e6db74">&#34;*.jpeg&#34;</span>,
+    <span style="color:#e6db74">&#34;*.png&#34;</span>,
+    <span style="color:#e6db74">&#34;*.gif&#34;</span>,
+    <span style="color:#e6db74">&#34;*.ttf&#34;</span>,
+    <span style="color:#e6db74">&#34;*.tga&#34;</span>,
+    <span style="color:#e6db74">&#34;*.dds&#34;</span>,
+    <span style="color:#e6db74">&#34;*.ico&#34;</span>,
+    <span style="color:#e6db74">&#34;*.eot&#34;</span>,
+    <span style="color:#e6db74">&#34;*.pdf&#34;</span>,
+    <span style="color:#e6db74">&#34;*.swf&#34;</span>,
+    <span style="color:#e6db74">&#34;*.jar&#34;</span>,
+    <span style="color:#e6db74">&#34;*.zip&#34;</span>,
+    <span style="color:#e6db74">&#34;*.json&#34;</span>,
+    <span style="color:#e6db74">&#34;*.log&#34;</span>,
+    <span style="color:#e6db74">&#34;*.map*&#34;</span>,
+    <span style="color:#e6db74">&#34;*.min.*&#34;</span>,
+    <span style="color:#e6db74">&#34;*.sql&#34;</span>,
+    <span style="color:#e6db74">&#34;.db/*&#34;</span>,
+    <span style="color:#e6db74">&#34;.git/*&#34;</span>,
+    <span style="color:#e6db74">&#34;.hg/*&#34;</span>,
+    <span style="color:#e6db74">&#34;.sass-cache/*&#34;</span>,
+    <span style="color:#e6db74">&#34;.svn/*&#34;</span>,
+    <span style="color:#e6db74">&#34;bower*/*&#34;</span>,
+    <span style="color:#e6db74">&#34;cache/*&#34;</span>,
+    <span style="color:#e6db74">&#34;conf/*&#34;</span>,
+    <span style="color:#e6db74">&#34;debug.log&#34;</span>,
+    <span style="color:#e6db74">&#34;logs/*&#34;</span>,
+    <span style="color:#e6db74">&#34;*.log&#34;</span>,
+    <span style="color:#e6db74">&#34;node_modules/*&#34;</span>,
+    <span style="color:#e6db74">&#34;vendor/*&#34;</span>,
+]<span style="color:#960050;background-color:#1e0010">,</span>
+</code></pre></div><p>And, this, so far, has turned out to be right. And, as you can see, I&rsquo;ve included a few other patters I don&rsquo;t care for Sublime to index. I only want Sublime indexing for <code>Goto Definition</code> stuff anyways.</p>
+<p>I also don&rsquo;t have anything for <code>index_exclude_patterns</code> since they are already in the <code>binary_file_patterns</code> above.</p>
+]]></content>
+        </item>
         
         <item>
             <title>Stoic Week 2020: Sunday (Monday Makeup)</title>

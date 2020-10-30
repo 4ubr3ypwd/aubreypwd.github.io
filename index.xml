@@ -6,10 +6,20 @@
     <description>Recent content on Aubrey Portwood</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://aubreypwd.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sublime hangs (beachball) on save [Fix]</title>
+      <link>https://aubreypwd.com/sublime-file-hangs-on-save/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/sublime-file-hangs-on-save/</guid>
+      <description>So, the last few weeks I&amp;rsquo;ve had a thing happen since switching to a MacBook Air recently. Since the CPU is not up to snuff as my old MacBook Pro (more to come on this switch later ⌨️), Sublime Text would hang for about a second on save of a file in a large project.
+This likely went un-notice on my 2.7Ghz MacBook Pro, but started to notice it on my Air.</description>
+    </item>
     
     <item>
       <title>Stoic Week 2020: Sunday (Monday Makeup)</title>
@@ -98,16 +108,6 @@ The idea is you answer a few simple prompts:
  Today I did some experimenting. You see my system is entirely customized to be super-efficient and automated.
 
 As you can see I currently have these housed in a giant Git repository in my ~/.config/. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://aubreypwd.com/hello-world/</link>
-      <pubDate>Sat, 08 Aug 2020 12:28:58 -0600</pubDate>
-      
-      <guid>https://aubreypwd.com/hello-world/</guid>
-      <description>Today I had a lot of fun building a new site for aubreypwd.com using Hugo and Github Pages.
- I haven&amp;rsquo;t had a lot of time to work on a website, let alone write content for one. In fact, I used to have a pretty nice site, but I never kept up with it, and eventually just redirected it to Twitter. I also tried out write.as to try and publish content, but I found I didn&amp;rsquo;t really use it a lot.</description>
     </item>
     
   </channel>
