@@ -6,11 +6,7 @@
     <description>Recent content on Aubrey Portwood</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://aubreypwd.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://aubreypwd.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sublime hangs (beachball) on save [Fix]</title>
       <link>https://aubreypwd.com/sublime-file-hangs-on-save/</link>
