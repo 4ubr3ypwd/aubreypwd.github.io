@@ -106,5 +106,27 @@ The idea is you answer a few simple prompts:
 As you can see I currently have these housed in a giant Git repository in my ~/.config/. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.</description>
     </item>
     
+    <item>
+      <title>Hello World</title>
+      <link>https://aubreypwd.com/hello-world/</link>
+      <pubDate>Sat, 08 Aug 2020 12:28:58 -0600</pubDate>
+      
+      <guid>https://aubreypwd.com/hello-world/</guid>
+      <description>Today I had a lot of fun building a new site for aubreypwd.com using Hugo and Github Pages.
+ I haven&amp;rsquo;t had a lot of time to work on a website, let alone write content for one. In fact, I used to have a pretty nice site, but I never kept up with it, and eventually just redirected it to Twitter. I also tried out write.as to try and publish content, but I found I didn&amp;rsquo;t really use it a lot.</description>
+    </item>
+    
+    <item>
+      <title>Better words for stoic virtues</title>
+      <link>https://aubreypwd.com/better-words-for-stoic-virtues/</link>
+      <pubDate>Fri, 03 Jul 2020 03:17:00 -0600</pubDate>
+      
+      <guid>https://aubreypwd.com/better-words-for-stoic-virtues/</guid>
+      <description>This article was moved from thebadstoic.com, which may no longer be active.
+ Traditionally, the words for the four primary virtues of Stoicism are:
+ Wisdom Justice Courage Temperance  If you’re about to do a thing, you ask yourself:
+ Am I being Wise? Am I being Just? Am I being Courageous? Am I being Temperate?  But, none of these words have ever really meant much for me.</description>
+    </item>
+    
   </channel>
 </rss>
