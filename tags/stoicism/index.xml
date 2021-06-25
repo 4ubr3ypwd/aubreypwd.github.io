@@ -1,62 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Aubrey Portwood</title>
+    <title>stoicism on Aubrey Portwood</title>
     
     
     
-    <link>https://aubreypwd.com/</link>
-    <description>Recent content on Aubrey Portwood</description>
+    <link>https://aubreypwd.com/tags/stoicism/</link>
+    <description>Recent content in stoicism on Aubrey Portwood</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; Aubrey Portwood / &lt;a href=&#34;https://aubreypwd.com/index.xml&#34;&gt;&lt;i class=&#34;im im-radio&#34;&gt;&lt;/i&gt; RSS&lt;/a&gt; / Powered by &lt;a href=&#34;https://https://gohugo.io/&#34;&gt;hugo&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34; target=&#34;_blank&#34;&gt;hello-friend&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 25 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://aubreypwd.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://aubreypwd.com/tags/stoicism/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Hello World v1.1</title>
-      <link>https://aubreypwd.com/hello-world-1-1/</link>
-      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aubreypwd.com/hello-world-1-1/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          So today for #5ftf @WebDevStudios I thought I was going to work on fixing a few things on my fork of rhazdon/hugo-theme-hello-friend-ng and work some of them upstream, but I actually decided to use the panr/hugo-theme-hello-friend theme both of them are based on.
-So here it is! 🙌🏻 — It&amp;rsquo;s basically the same thing but a little easier to configure and work on.
- Brief Life Update I also thought this would be a good chance to post something quickly about how things are going lately.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Sublime hangs (beachball) on save [Fix]</title>
-      <link>https://aubreypwd.com/sublime-file-hangs-on-save/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://aubreypwd.com/sublime-file-hangs-on-save/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          So, the last few weeks I&amp;rsquo;ve had a thing happen since switching to a MacBook Air recently. Since the CPU is not up to snuff as my old MacBook Pro (more to come on this switch later ⌨️), Sublime Text would hang for about a second on save of a file in a large project.
-This likely went un-notice on my 2.7Ghz MacBook Pro, but started to notice it on my Air.
-          
-        
-        </description>
-    </item>
     
     <item>
       <title>Stoic Week 2020: Sunday (Monday Makeup)</title>
@@ -180,28 +137,6 @@ The wise person does nothing that he could regret, nothing against his will, but
     </item>
     
     <item>
-      <title>Apple Watch SE Review</title>
-      <link>https://aubreypwd.com/apple-watch-se-watch-os-7-review/</link>
-      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://aubreypwd.com/apple-watch-se-watch-os-7-review/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          About 2 weeks ago I bought an Apple Watch SE. This is my review/experience so far.
-Note that I do not sync things to my watch, as I prefer to play most things directly from my iPhone, just a quick note for the below, as I&amp;rsquo;m not doing any syncing for Music, Audiobooks, and Podcasts.
-The Bad Audiobooks &amp;amp; Podcasts Show Wrong Episode As you can see I&amp;rsquo;m listening to The Daily Stoic, but it&amp;rsquo;s showing Stoicism on Fire!
-          
-        
-        </description>
-    </item>
-    
-    <item>
       <title>My Stoic Five-minute Journal</title>
       <link>https://aubreypwd.com/stoic-five-minute-journal/</link>
       <pubDate>Sat, 26 Sep 2020 03:17:00 -0600</pubDate>
@@ -218,50 +153,6 @@ The Bad Audiobooks &amp;amp; Podcasts Show Wrong Episode As you can see I&amp;rs
           So the last month or so I&amp;rsquo;ve been journaling a little bit different. A while go, I ran across a video that went over the idea of the Five Minute Journal, and I was intrigued.
 The idea is you answer a few simple prompts:
  I am grateful for: What would make today great? Daily affirmation. I am: 3 Amazing things that happened today: How could I have made today even better:  &amp;hellip;and I did that for about a week before I felt it lacked a Stoic-seasoning, and so I worked and re-worked that format until I landed on a format that has both accomplish the goal of making journaling a little easier and getting your Stoic practice in.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>De-centralizing my system configurations: dotfiles</title>
-      <link>https://aubreypwd.com/de-centralize-configs-gitconfig-gitignore/</link>
-      <pubDate>Fri, 18 Sep 2020 12:28:58 -0600</pubDate>
-      
-      <guid>https://aubreypwd.com/de-centralize-configs-gitconfig-gitignore/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Note, I&amp;rsquo;ve entirely ditched this system and opted for a new one I will post about later.
- Today I did some experimenting. You see my system is entirely customized to be super-efficient and automated.
-
-As you can see I currently have these housed in a giant Git repository in my ~/.config/. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.
-          
-        
-        </description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://aubreypwd.com/hello-world/</link>
-      <pubDate>Sat, 08 Aug 2020 12:28:58 -0600</pubDate>
-      
-      <guid>https://aubreypwd.com/hello-world/</guid>
-      <description>
-        
-          
-          
-          
-        
-        
-        
-          Today I had a lot of fun building a new site for aubreypwd.com using Hugo and Github Pages.
- I haven&amp;rsquo;t had a lot of time to work on a website, let alone write content for one. In fact, I used to have a pretty nice site, but I never kept up with it, and eventually just redirected it to Twitter. I also tried out write.as to try and publish content, but I found I didn&amp;rsquo;t really use it a lot.
           
         
         </description>

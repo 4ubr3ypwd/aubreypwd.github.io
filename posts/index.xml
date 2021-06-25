@@ -1,711 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Posts on Aubrey Portwood</title>
-        <link>https://aubreypwd.com/posts/</link>
-        <description>Recent content in Posts on Aubrey Portwood</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
-        <atom:link href="https://aubreypwd.com/posts/index.xml" rel="self" type="application/rss+xml" />
+  <channel>
+    <title>Posts on Aubrey Portwood</title>
+    
+    
+    
+    <link>https://aubreypwd.com/posts/</link>
+    <description>Recent content in Posts on Aubrey Portwood</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; Aubrey Portwood / &lt;a href=&#34;https://aubreypwd.com/index.xml&#34;&gt;&lt;i class=&#34;im im-radio&#34;&gt;&lt;/i&gt; RSS&lt;/a&gt; / Powered by &lt;a href=&#34;https://https://gohugo.io/&#34;&gt;hugo&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34; target=&#34;_blank&#34;&gt;hello-friend&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 25 Jun 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://aubreypwd.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello World v1.1</title>
+      <link>https://aubreypwd.com/hello-world-1-1/</link>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/hello-world-1-1/</guid>
+      <description>
         
-        <item>
-            <title>Sublime hangs (beachball) on save [Fix]</title>
-            <link>https://aubreypwd.com/sublime-file-hangs-on-save/</link>
-            <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://aubreypwd.com/sublime-file-hangs-on-save/</guid>
-            <description>So, the last few weeks I&amp;rsquo;ve had a thing happen since switching to a MacBook Air recently. Since the CPU is not up to snuff as my old MacBook Pro (more to come on this switch later ⌨️), Sublime Text would hang for about a second on save of a file in a large project.
-This likely went un-notice on my 2.7Ghz MacBook Pro, but started to notice it on my Air.</description>
-            <content type="html"><![CDATA[<p>So, the last few weeks I&rsquo;ve had a thing happen since switching to a MacBook Air recently. Since the CPU is not up to snuff as my old MacBook Pro (more to come on this switch later ⌨️), Sublime Text would hang for about a second on save of a file in a large project.</p>
-<p>This likely went un-notice on my 2.7Ghz MacBook Pro, but started to notice it on my Air. Turns out it was because Sublime was indexing all the various <code>node_modules/**</code> in all the various folders it was in, on save.</p>
-<p>So I had to figure out a way to <em>not</em> index files, yet leave them in my sidebar (I want them there).</p>
-<p>According to <a href="https://stackoverflow.com/a/40028043/1436129">this</a> to tell Sublime <em>not</em> to index a file, yet leave it in the Sidebar you have to adjust <code>binary_file_patterns</code> in your user settings, like so:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;binary_file_patterns&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>
-[
-    <span style="color:#e6db74">&#34;*.jpg&#34;</span>,
-    <span style="color:#e6db74">&#34;*.jpeg&#34;</span>,
-    <span style="color:#e6db74">&#34;*.png&#34;</span>,
-    <span style="color:#e6db74">&#34;*.gif&#34;</span>,
-    <span style="color:#e6db74">&#34;*.ttf&#34;</span>,
-    <span style="color:#e6db74">&#34;*.tga&#34;</span>,
-    <span style="color:#e6db74">&#34;*.dds&#34;</span>,
-    <span style="color:#e6db74">&#34;*.ico&#34;</span>,
-    <span style="color:#e6db74">&#34;*.eot&#34;</span>,
-    <span style="color:#e6db74">&#34;*.pdf&#34;</span>,
-    <span style="color:#e6db74">&#34;*.swf&#34;</span>,
-    <span style="color:#e6db74">&#34;*.jar&#34;</span>,
-    <span style="color:#e6db74">&#34;*.zip&#34;</span>,
-    <span style="color:#e6db74">&#34;*.json&#34;</span>,
-    <span style="color:#e6db74">&#34;*.log&#34;</span>,
-    <span style="color:#e6db74">&#34;*.map*&#34;</span>,
-    <span style="color:#e6db74">&#34;*.min.*&#34;</span>,
-    <span style="color:#e6db74">&#34;*.sql&#34;</span>,
-    <span style="color:#e6db74">&#34;.db/*&#34;</span>,
-    <span style="color:#e6db74">&#34;.git/*&#34;</span>,
-    <span style="color:#e6db74">&#34;.hg/*&#34;</span>,
-    <span style="color:#e6db74">&#34;.sass-cache/*&#34;</span>,
-    <span style="color:#e6db74">&#34;.svn/*&#34;</span>,
-    <span style="color:#e6db74">&#34;bower*/*&#34;</span>,
-    <span style="color:#e6db74">&#34;cache/*&#34;</span>,
-    <span style="color:#e6db74">&#34;conf/*&#34;</span>,
-    <span style="color:#e6db74">&#34;debug.log&#34;</span>,
-    <span style="color:#e6db74">&#34;logs/*&#34;</span>,
-    <span style="color:#e6db74">&#34;*.log&#34;</span>,
-    <span style="color:#e6db74">&#34;node_modules/*&#34;</span>,
-    <span style="color:#e6db74">&#34;vendor/*&#34;</span>,
-]<span style="color:#960050;background-color:#1e0010">,</span>
-</code></pre></div><p>And, this, so far, has turned out to be right. And, as you can see, I&rsquo;ve included a few other patters I don&rsquo;t care for Sublime to index. I only want Sublime indexing for <code>Goto Definition</code> stuff anyways.</p>
-<p>I also don&rsquo;t have anything for <code>index_exclude_patterns</code> since they are already in the <code>binary_file_patterns</code> above.</p>
-]]></content>
-        </item>
+          
+          
+          
         
-        <item>
-            <title>Stoic Week 2020: Sunday (Monday Makeup)</title>
-            <link>https://aubreypwd.com/stoic-week-2020-sunday-makeup/</link>
-            <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://aubreypwd.com/stoic-week-2020-sunday-makeup/</guid>
-            <description>Morning Afternoon Evening   Morning  The works of the gods are full of providence, and the works of fortune are not separate from nature or the interweaving and intertwining of the things governed by providence. Everything flows from there. Further factors are necessity and the benefit of the whole universe, of which you are a part. What is brought by the nature of the whole and what maintains that nature is good for each part of nature.</description>
-            <content type="html"><![CDATA[<p><img src="/images/1669160376/stoic-week.png" alt="Stoic Week Image"></p>
-<ul>
-<li><a href="#morning">Morning</a></li>
-<li><a href="#afternoon">Afternoon</a></li>
-<li><a href="#evening">Evening</a></li>
-</ul>
-<hr>
-<h2 id="morning">Morning</h2>
-<blockquote>
-<p>The works of the gods are full of providence, and the works of fortune are not separate from nature or the interweaving and intertwining of the things governed by providence. Everything flows from there. Further factors are necessity and the benefit of the whole universe, of which you are a part. What is brought by the nature of the whole and what maintains that nature is good for each part of nature. Just as the changes in the elements maintain the universe so too do the changes in the compounds. — Marcus Aurelius, Meditations, 2.3</p>
-</blockquote>
-<p>The first thing I thought of when reading this is about <em>providence</em>. I used to be an atheist, maybe a bit agnostic at times, but either way I sure didn&rsquo;t believe in an all powerful god watching over and thinking about us. But, now, I do believe Nature is. Maybe not watching. Maybe not thinking about us (those are human qualities, remember). But, if you think about the idea that the Cosmos is orderly (not some chaotic soup), alive (as in it&rsquo;s going to keep making the Cosmos), and resulted in you and me being here&hellip; has something to say about how Nature is doing <em>something</em> to ensure that out galaxy is here, our sun is here, that our Earth is here and that you and me are alive thinking and feeling creatures. So sure, maybe I don&rsquo;t believe in a typical personality-driven god (in fact I think I honor Nature <em>more</em> by not), but I definitely believe in Nature and it&rsquo;s creative quality in the Cosmos.</p>
-<p>So, now when my friends ask me if I believe in God — well yeah — but this God is one-and-the-same with Nature. And I do think Nature deserves to be reverenced for <em>our own</em> nature. Before my Stoicism, I used to be a very non-spiritual person, and when I found Stoicism I thought it was <em>very</em> compatible with that, and it was. But suprisingly for me Stoicism made me a more spiritual person over time. <em>Because</em> of the notion of Nature. Not that it made me beleive in Zeus and the pantheon or anything, but that I understood that Nature <em>is</em> alive, <em>is</em> aimed at something (order, you, me, life), and <em>did</em> create me and my mind and even the human idea of Virtue, and so on. It&rsquo;s an active element in the entire Cosmos, and for me it&rsquo;s become something I&rsquo;ve quite developed a <em>spiritual</em> relationship with.</p>
-<hr>
-<h2 id="evening-evening">Evening (#evening)</h2>
-<blockquote>
-<p>I travel along nature’s way until I fall down and take my rest, breathing out my last into the air, from which I draw my daily breath, and falling down to that earth from which my father drew his seed, my mother her blood and my nurse her milk, and from which for so many years I have taken my daily food and drink, the earth which carries my footsteps and which I have used to the full in so many ways. — Marcus Aurelius, Meditations, 5.4</p>
-</blockquote>
-<p>There is no escaping our planet. One way or another you return to the place from whence you came. Nature is very vast, coming from almost infinity all the way down to us. And it is on <em>our</em> planet that we get closest to Nature, where it is the most intimate with us, where it gives us th most. I think that&rsquo;s why time in Nature feels so rejuvinating and nurturing.</p>
-<p>Since we&rsquo;re on the topic of God today, I once heard that if you want to worship something, worship your parents, or the Sun, or the Earth. Not to dis-credit the aspects of Nature (and, therefore God) that are expansive, but as I said in our Sun, in our planet, it is most-intimate with us, and I think there&rsquo;s something special about that.</p>
-<p>Sure, Nature is out there in the infinite expanse, and that too is awesome and inspiring. But, don&rsquo;t forgot the aspects of Nature that are <em>right here</em>, in the very breaths you have taken all day long. It&rsquo;s been snowing like crazy today, and I&rsquo;m not really a fan of cold-weather. But, I still stand in awe of how stark of a contrast it is when you go from a sunny day to frozen Earth.</p>
-<p>Marcus often reflects on Nature, and even advises it as one of the most important practices of his own Stoicism. I advise you, I guess, to build a relationship with Nature by not only looking at all it&rsquo;s expansive wonder, but also it&rsquo;s simple wonders&hellip;like how the sky is blue instead of red, or how a cool breeze feels on a hot day.</p>
-<p>I think this is where true spirituality begins&hellip;with Nature, right here, itself.</p>
-]]></content>
-        </item>
         
-        <item>
-            <title>Stoic Week 2020: Saturday</title>
-            <link>https://aubreypwd.com/stoic-week-2020-saturday/</link>
-            <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://aubreypwd.com/stoic-week-2020-saturday/</guid>
-            <description>Morning Evening   Morning  Be like the headland, on which the waves break constantly, which still stands firm, while the foaming waters are put to rest around it. ‘It is my bad luck that this has happened to me.’ On the contrary, say, ‘It is my good luck that, although this has happened to me, I can bear it without getting upset, neither crushed by the present nor afraid of the future.</description>
-            <content type="html"><![CDATA[<p><img src="/images/1669160376/stoic-week.png" alt="Stoic Week Image"></p>
-<ul>
-<li><a href="#morning">Morning</a></li>
-<li><a href="#evening">Evening</a></li>
-</ul>
-<hr>
-<h2 id="morning">Morning</h2>
-<blockquote>
-<p>Be like the headland, on which the waves break constantly, which still stands firm, while the foaming waters are put to rest around it. ‘It is my bad luck that this has happened to me.’ On the contrary, say, ‘It is my good luck that, although this has happened to me, I can bear it without getting upset, neither crushed by the present nor afraid of the future.’ This kind of event could have happened to anyone, but not everyone would have borne it without getting upset. – Marcus Aurelius, Meditations, 4.49</p>
-</blockquote>
-<p>Can you really be happy even though the world seems to suck around you? I used to struggle with the idea that Stoicism leads to happiness, because if I&rsquo;m honest, indeed the end-goal for me in any philosophy is to be happy in a lasting kind-of way. Stoicism makes no claim that it will fix the world for you, indeed your kids will still hate going to bed, you and your wife will still have conflicts, and things are generally going to continue to suck all around you. Stoicism shuns this kind of happiness (the idea that things will suddenly start going good for you in relation to the outside world) as foolish, because, as you may know by now, you cannot control the world no matter what you do.</p>
-<p>But, I&rsquo;ve alluded to it in my earlier writings, that the kind of happiness that you have control over is the happiness you feel about <em>yourself</em>, e.g. when you look into the mirror. That is your business, that&rsquo;s all you should really work on. And, of course, if the world chooses not to suck around you at time, enjoying life&rsquo;s simple and free joys is totally okay.</p>
-<p>But, I think early on in my Stoicism I had this idea that if I fixed <em>me</em> all these things would stop sucking, but that <em>never came true</em> (and it never will). The only thing that hopefully changes is that you react differently (or not react at all in some cases) to the world sucking around you. But, the sucky world is still going to hammer down on you, and the Stoics make it pretty clear that you have to simply not let that get to you, and I think that&rsquo;s what this passage means. I think that&rsquo;s what Courage (a core Stoic virtue) means.</p>
-<p>The world still sucks when you become a Stoic, and as you improve as a Stoic. Nothing fixes that, that&rsquo;s the point right. That&rsquo;s the human condition. Let the world be the world, and you change <em>you</em> so that it doesn&rsquo;t rope what you <em>can</em> control into it&rsquo;s suckiness.</p>
-<hr>
-<h2 id="evening">Evening</h2>
-<blockquote>
-<p>Glad and cheerful, let us say, as we go to our rest: ‘I have finished living; I have run the course that fortune set for me’. If God gives us another day, let us receive it with joy. The happiest person, who owns himself more fully, is the one who waits for the next day without anxiety. Anyone who can say, ‘I have had my life’ rises with a bonus, receiving one more day. – Seneca, Letters, 12.9.</p>
-</blockquote>
-<p>&hellip;</p>
-<blockquote>
-<p>The happiest person, who owns himself more fully, is the one who waits for the next day without anxiety.</p>
-</blockquote>
-<p>Wow, what a wonderful statement. Could I sum up all my aspirations as a Stoic in one simple sentance? What does it mean to own oneself? How much of yourself do you give away to others?
-How much do you give away to the gods (blaming them)?</p>
-<p>I did a lot of thinking tonight about self-control on the way home tonight from dropping off a friend at their house. Food, sexual desire, frustration, anxiety (fear of the unknown), annoyance&hellip; All of these things are things I struggle with (and I would bet most Stoics do), as I simply allow other things other than me have control over who I am&hellip;as if I&rsquo;m giving away my control to them, instead of giving that control to myself.</p>
-<p>And, if you think about it we&rsquo;re complicit in giving away ourselves and what we really want to other things. You see, I didn&rsquo;t want to over-eat that giant delicious breakfast burrito and fries with extra chopped green chile this morning. Instead I&rsquo;d rather, maybe, sample it and maybe eat something healthier instead so I can be proud of my body later. But instead of giving that success to myself, I give the failure of it to&hellip;a breakfast burrito! Sure, it sounds stupid, but I think most people struggle more with these kinds of small things vs. e.g. some of these <em>higher sufferings</em>, like being tourtured, and the like. And, the truth of it is we are giving away <em>ourselves</em> to exactly that, stupid things we would hope were never written about us.</p>
-<p>Aubrey: the guy who couldn&rsquo;t turn away from a&hellip;breakfast burrito and fries. Now that this is on the Internet, it will never go away! But I would rather be remembered for greater struggles.</p>
-<h3 id="the-fraud">The Fraud</h3>
-<p>The other thing I thought about is about how much easier it is to live up to being good (doing the right thing) when people will judge you for it. But it&rsquo;s when people <em>aren&rsquo;t watching</em> that makes doing the right thing so challenging. Stoicism might have you thinking that you&rsquo;re just going to go off and do the right thing all the time&hellip;wrong. I mean that&rsquo;s the ideal, but I am confident that Stoics everywhere struggle with integrity, as I do.</p>
-<p>I think having integrity (which is essentially doing the right thing even when people aren&rsquo;t around to judge your character) is probably the hardest thing to do. Holding yourself accountable <em>to yourself</em> is really hard, because sometimes we value what others think of us more that what we think about us — and <em>that</em> is entirely non-Stoic by the way! But sometimes, you just have to give it to yourself straight, like I did tonight&hellip;</p>
-<p>Sometimes, I&rsquo;m a fraud.</p>
-<p>Sometimes I don&rsquo;t do the right thing when no one&rsquo;s watching. And it&rsquo;s easy to ignore. But that just makes me a fraud! And, don&rsquo;t take my tone to be a depressing one, I don&rsquo;t want to be a fraud! No one does! There&rsquo;s a motivating force behind it. If I claim to be a Stoic, if I claim to want to do the right thing, if I claim to want self-control, well then I have to live up to it and <em>not be a fraud.</em></p>
-<p>Part of being Stoic, I think, is taking a really hard look at yourself and being really honest with who you are and who you are not. Marcus often says in his Meditations that it&rsquo;s important to uphold your principles — he says it over and over! I think it&rsquo;s because even an emperor struggled with integrity too!</p>
-<p>Sometimes I&rsquo;m a fraud.</p>
-<p>I&rsquo;m going to go work on not being one&hellip;..</p>
-]]></content>
-        </item>
         
-        <item>
-            <title>Stoic Week 2020: Friday</title>
-            <link>https://aubreypwd.com/stoic-week-2020-friday/</link>
-            <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://aubreypwd.com/stoic-week-2020-friday/</guid>
-            <description>Morning Afternoon Evening   Morning  It isn’t the things themselves that disturb people, but the judgements that they form about them. Death, for instance, is nothing terrible, or else it would have seemed so to Socrates too; no, it is in the judgement that death is terrible that the terror lies. Accordingly, whenever we are impeded, disturbed or distressed, we should never blame anyone else but only ourselves, that is, our judgements.</description>
-            <content type="html"><![CDATA[<p><img src="/images/1669160376/stoic-week.png" alt="Stoic Week Image"></p>
-<ul>
-<li><a href="#morning">Morning</a></li>
-<li><a href="#afternoon">Afternoon</a></li>
-<li><a href="#evening">Evening</a></li>
-</ul>
-<hr>
-<h2 id="morning">Morning</h2>
-<blockquote>
-<p>It isn’t the things themselves that disturb people, but the judgements that they form about them. Death, for instance, is nothing terrible, or else it would have seemed so to Socrates too; no, it is in the judgement that death is terrible that the terror lies. Accordingly, whenever we are impeded, disturbed or distressed, we should never blame anyone else but only ourselves, that is, our judgements. It is an act of a poorly educated person to blame others when things are going badly for him; one who has taken the first step towards being properly educated blames himself, while one who is fully educated blames neither anyone else nor himself. – Epictetus, Handbook, 5</p>
-</blockquote>
-<p>This concept is something in my Stoicism that has made a profound change in my life. If you&rsquo;re ever upset, it&rsquo;s your fault. Marcus says something similar that goes to the effect of, <em>&ldquo;Today I escaped anxiety&hellip;no, I discarded it.</em> And yeah, that&rsquo;s it. You&rsquo;re going to get upset at people and things (ever hit your head on the fridge, I sometimes things that&rsquo;s more of a challenge), and I think that&rsquo;s natural. But the thing is that you can <em>escape</em> that frustration, you can <em>discard it</em>. And Marcus makes it sounds really easy doesn&rsquo;t he, that&rsquo;s what I used to think too. But when you pin how you feel on <em>you</em>, and stop being a <em>coward</em> and pinning how <em>you</em> feel on others&hellip;I think you realize it&rsquo;s just a matter letting it go.</p>
-<p>Or, at least converting it into something good. Stoics get put into some repressive emotional camp because of this, but most of the time the emotion doesn&rsquo;t just go away. And sure, your attitude about it has shifted from <em>them</em> to <em>me</em>, but if you can&rsquo;t get ride of the emotion, all you have to do is convert that emotion into something good, both for you and the situation.</p>
-<p>Yeah&hellip;.let me be clear. The emotion of being pissed, bothered, angry at the fridge doesn&rsquo;t just go away all the time. Instead you simply stop fighting the fridge and fighting yourself. Then it&rsquo;s finally all up to you to change it around. Escape it, discard it, or <em>convert</em> it into positive actions like getting a new fridge.</p>
-<p>I think you also have to believe that, indeed, how you feel, is up to <em>you</em>, which takes practice. I&rsquo;m not sure if it&rsquo;s hearing Marcus or Epictetus repeat it <em>over and over and over</em>, but let&rsquo;s think about this logically: If I were dead, I wouldn&rsquo;t be upset, right? Pretty definitive if you ask me.</p>
-<p>If I&rsquo;m upset, it&rsquo;s all me&hellip;</p>
-<p><img src="https://media1.tenor.com/images/f6b231f540ffa610237b8d9416368dae/tenor.gif?itemid=13795559" style="margin: 40px auto;" alt="It's not you it's me by George Castanza."></p>
-<hr>
-<p>I did not feel well this evening, and skipped these. I may make these up later this weekend.</p>
-]]></content>
-        </item>
+          So today for #5ftf @WebDevStudios I thought I was going to work on fixing a few things on my fork of rhazdon/hugo-theme-hello-friend-ng and work some of them upstream, but I actually decided to use the panr/hugo-theme-hello-friend theme both of them are based on.
+So here it is! 🙌🏻 — It&amp;rsquo;s basically the same thing but a little easier to configure and work on.
+ Brief Life Update I also thought this would be a good chance to post something quickly about how things are going lately.
+          
         
-        <item>
-            <title>Stoic Week 2020: Thursday</title>
-            <link>https://aubreypwd.com/stoic-week-2020-thursday/</link>
-            <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://aubreypwd.com/stoic-week-2020-thursday/</guid>
-            <description>Morning Afternoon Evening   Morning  It is important to understand that nature creates in parents affection for their children; and parental affection is the source from which we trace the shared community of the human race … As it is obvious that it is natural to us to shrink from pain, so it is clear that we derive from nature itself the motive to love those to whom we have given birth.</description>
-            <content type="html"><![CDATA[<p><img src="/images/1669160376/stoic-week.png" alt="Stoic Week Image"></p>
-<ul>
-<li><a href="#morning">Morning</a></li>
-<li><a href="#afternoon">Afternoon</a></li>
-<li><a href="#evening">Evening</a></li>
-</ul>
-<hr>
-<h2 id="morning">Morning</h2>
-<blockquote>
-<p>It is important to understand that nature creates in parents affection for their children; and parental affection is the source from which we trace the shared community of the human race … As it is obvious that it is natural to us to shrink from pain, so it is clear that we derive from nature itself the motive to love those to whom we have given birth. From this motive is developed the mutual concern which unites human beings as such. The fact of their common humanity means that one person should feel another to be his relative. – Cicero, On Ends, 3.62-3.</p>
-</blockquote>
-<p>The human faculty for empathy and sympathy are quite unique aren&rsquo;t they? The power to reason is not simply about being logical, but it&rsquo;s more about listening to the voice inside, with either Nature placed in us, or if you beleive: just how humans evolved. Either way it&rsquo;s inside of you, I choose to believe it is special, unique, and placed within us.</p>
-<p><img src="/images/3018186774/IMG_0209.jpeg" alt="Lexie, Me, and Tessa" style="margin: 40px auto;"></p>
-<p>Being a parent is tough, but my love for my daughters is a single great source of joy in my life, and yes it all seems to come so natural and obvious (as most parents can relate). Being someone who grew up without a father who chose not to be there, I have to wonder that he heard that same voice inside and simply ignored it, or likely struggled with it. Or was it taken over by fear (we all know how that can go)?</p>
-<p>Either way, it reminds me that the ability to <em>listen</em> to that <em>divine light of reason</em> within is equally as special as it&rsquo;s presence.</p>
-<hr>
-<h2 id="evening">Evening</h2>
-<p>This week has all been about Justice (the virtue) for me. I&rsquo;ve always summed it down to being fair, or performing the golden rule. But I&rsquo;ve never really looked at it from the point of view of benefiting myself. As I have been explaining in my other writings this week, seeing service to your community as a benefit to yourself, and ultimately your character, gives it new meaning. Not only am I working for the benefit of others (just from the sheer nature of e.g. compassion, empathy, and sympathy — as I explained <a href="#morning">this morning</a>), but also for my own benefit.</p>
-<p>It feels wierd to take that angle, almost a selfish one, but if what you are looking for is happiness, I think understanding that your community needs to be happy in order for you to be happy just makes sense.</p>
-<p>Today I felt that especially at work. Our community is pretty great. Someone, just the other day, commented (and I&rsquo;m paraphrasing):</p>
-<blockquote>
-<p>Just the fact that I feel like we have each other&rsquo;s backs is a great feeling.</p>
-</blockquote>
-<p>And, that&rsquo;s true, it is.</p>
-]]></content>
-        </item>
+        </description>
+    </item>
+    
+    <item>
+      <title>Sublime hangs (beachball) on save [Fix]</title>
+      <link>https://aubreypwd.com/sublime-file-hangs-on-save/</link>
+      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/sublime-file-hangs-on-save/</guid>
+      <description>
         
-        <item>
-            <title>Stoic Week 2020: Wednesday</title>
-            <link>https://aubreypwd.com/stoic-week-2020-wednesday/</link>
-            <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://aubreypwd.com/stoic-week-2020-wednesday/</guid>
-            <description>Morning Afternoon Evening   Morning  If you can find anything in human life better than justice, truthfulness, self-control, courage turn to it with all your heart and enjoy the supreme good that you have found but if you find all other things to be trivial and valueless in comparison with virtue, give no room to anything else, since, once you turn towards that and divert from your proper path, you will no longer be able without inner conflict to give the highest honour to what is properly good.</description>
-            <content type="html"><![CDATA[<p><img src="/images/1669160376/stoic-week.png" alt="Stoic Week Image"></p>
-<ul>
-<li><a href="#morning">Morning</a></li>
-<li><a href="#afternoon">Afternoon</a></li>
-<li><a href="#evening">Evening</a></li>
-</ul>
-<hr>
-<h2 id="morning">Morning</h2>
-<blockquote>
-<p>If you can find anything in human life better than justice, truthfulness, self-control, courage turn to it with all your heart and enjoy the supreme good that you have found but if you find all other things to be trivial and valueless in comparison with virtue, give no room to anything else, since, once you turn towards that and divert from your proper path, you will no longer be able without inner conflict to give the highest honour to what is properly good. It is not right to set up as a rival to the rational and social good anything alien to its nature, such as the praise of the many, or positions of power, wealth, or enjoyment of pleasures. – Marcus Aurelius, Meditations, 3.6</p>
-</blockquote>
-<p>This week has been very eye-opening in reguard to the <em>Cardinal Virtues</em>. With Chuck Chakrapani&rsquo;s method of chiseling away what is <em>&ldquo;not Wisdom, Courage, Justice and Moderation,&quot;</em> they have taken a bit a a new role in my Stoicism this week. I&rsquo;ve always been a bit dis-satisfied with the cardinal Virtues, because in their call to <em>do them</em> I have always been left with wondering, <em>well, what should I do then?</em></p>
-<p>Thanks to Chuck Chakrapani&rsquo;s method, sometimes you just need to be told <em>what not to do</em> to make it clear. And so I am going to write (and remind myself this morning) what this method is about:</p>
-<h3 id="the-chisel-away-method">The Chisel Away Method</h3>
-<p>So, the focus is all on what <em>not</em> to do or <em>not</em> to be, leaving what to do or what to be left behind:</p>
-<ul>
-<li>For Wisdom, don&rsquo;t be the fool</li>
-<li>For Courage, don&rsquo;t do anything with fear</li>
-<li>For Justice, don&rsquo;t be selfish</li>
-<li>For Moderation, don&rsquo;t be excessive</li>
-</ul>
-<p>Now, there&rsquo;s a bit more to it than that. The way that Chuck builds a unique relationship of the latter three virtues to the first (Wisdom) is the most clarifying:</p>
-<h4 id="dont-be-the-fool">Don&rsquo;t be the fool</h4>
-<p>The ultimate rule is: <em>Stoics are not fools.</em></p>
-<p>And so, looking at <em>Courage</em>, it would be foolish, then, to be afraid of something:</p>
-<ol>
-<li>That is not in your control</li>
-<li>That has not yet come to pass, effectively doubling your fear</li>
-<li>That does not affect your internal will</li>
-</ol>
-<p>For <em>Justice</em>, it would be foolish to think that if you did not take care of your community, that it would be of any benefit to you; therefore take care of your communitie(s) for <em>your own benefit.</em></p>
-<p>For <em>Moderiation</em> (or Temperance), it would be foolish to think that managing more and more things (whether that be food, posessions, or indulgences) will be easier for you the more you obtain. Therefore, Moderation is somewhat <em>essentialistic</em> in nature, only have enough in your life that you can manage it, peacefully.</p>
-<h4 id="the-reward">The Reward</h4>
-<p>And so, you can see that all of the Cardinal Vitrues call you to Wisdom by not being the fool, to use your reason to finally find the reward of this call: <a href="Eudaimonia"><em>Eudaimonia</em></a>, or <em>happiness</em>.</p>
-<p>The last thing I want to talk about is that, in my exeperience as a Stoic, I have found that the reward of not being the fool, or being a good person, <em>is it&rsquo;s own reward</em>. I have reflected on exactly <em>why</em> I put myself through this, and it&rsquo;s <em>one simple thing for me</em>:</p>
-<p>When I look in the mirror, I&rsquo;m happy with <em>myself</em> and who I am. That, I think, is the ultimate reward of being a Stoic, and why I work on it every day.</p>
-<hr>
-<h2 id="afternoon">Afternoon</h2>
-<blockquote>
-<p>Draw up a list of what you think the most important qualithees are for living a good human life.</p>
-</blockquote>
-<p>About a month ago I did exactly this, but it was less general e.g. <em>a good human life</em>, but was more specific to just me. This list was, in no parthecular order:</p>
-<ul>
-<li>I eat well</li>
-<li>I accept that throughout my life, I will fail</li>
-<li>I&rsquo;m willing, e.g. adventurous</li>
-<li>I serve others over myself (this do not mean I do not serve myself, but my priorithees are in order)</li>
-<li>I am concerned more with the inmaterial than the material</li>
-<li>I do challenges (I find the more challenges I do the better I become)</li>
-<li>I am the hero (I know, cheesy, but this person wants to help out when no one else will)</li>
-<li>I am in control of my physical desires (lofty, I know)</li>
-<li>I do not seek out pleasure, but instead samples it when it comes my way</li>
-<li>I live in the present, never in the future (e.g. not afraid of the future)</li>
-<li>I speak very little (e.g. no idle chat, rambling)</li>
-<li>I avoid idle entertainments (e.g. as distractions or become absorbed in them)</li>
-</ul>
-<p>This was the list I came up with one weekend, and as you can see not <em>all</em> of it is &ldquo;<em>Stoic</em>,&rdquo; but msot of it lines up with Stoic thought in one way or another. I still am not sure how <em>I do challenges</em> fits in though.</p>
-<p>the last thing I guess I&rsquo;ll say is that even though you can get really orthodox with it all, I think in most cases it&rsquo;s okay to loosen up too. Even Seneca took luke-warm baths (as opposed to these austere cold showers you hear about from the Stoics) in his old age. I think the bulk of it has to do with, like I said <a href="#morning">this morning</a>, all about how you feel when you look at yourself in the mirror everyday.</p>
-<p><em>Note, my mid-day got busy and I did this during my <a href="#evening">evening</a> exercises.</em></p>
-<hr>
-<h2 id="evening">Evening</h2>
-<blockquote>
-<p>From what did we gain an understanding of virtue? From someone’s orderly character, his sense of what is appropriate and consistency, the harmony between all his actions, <strong>and his greatness of spirit in coping with everything.</strong> In this way, we came to understand the happy life, that flows on smoothly and is completely under its own control. – Seneca, Letters, 120.11</p>
-</blockquote>
-<p>The heart of Stoicism, at least for me, is admitting that most of life isn&rsquo;t under your control. We kind-of get tricked into thinking we can control things we don&rsquo;t control because, sometimes things get stable, e.g. our jobs sometimes stay pretty steady, things go good for a while, all to be up-ended suddenly and we&rsquo;re miserable. I think if you spend time noting down (accurately) what is going to last and what may not last and just keeping that list in front of you, you will at least not be fooled by momentary complacency (but my all means enjoy it while it lasts).</p>
-<p>Negative Visualization (also called Fear Setting) is one of the best techniques for coping with things that <em>will</em> happen in your life. In addition to making that list, of the things that may not last, e.g. you losing your job, write out a little story (I like to write it out) about what would happen, and exactly what you would do next, and likely what would happen in the following days, months, years, etc. You&rsquo;ll find that, in most cases, it&rsquo;s not that negative at all, just un-nerving, and now you have a plan. And, all you have to do is employ virtue along the way as stability comes and goes.</p>
-<p>If the Stoic isn&rsquo;t the fool, I guess it would be really foolish to think that from time to time you may be called to cope with a change in your life. Pleasant things don&rsquo;t last, they come and go. Pain and suffering doesn&rsquo;t last either, it too comes and goes. Even your emotions have steady and unsteady times (your character is <em>not</em> your emotions by the way).</p>
-<p>Yeah, the world is an up-and-down type of place, that&rsquo;s for sure. I guess the best thing you can do is let it be one, and just worry about what you&rsquo;re going to do in it.</p>
-]]></content>
-        </item>
+          
+          
+          
         
-        <item>
-            <title>Stoic Week 2020: Tuesday</title>
-            <link>https://aubreypwd.com/stoic-week-2020-tuesday/</link>
-            <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://aubreypwd.com/stoic-week-2020-tuesday/</guid>
-            <description>Morning Afternoon Evening   Morning  Morning Text for Reflection
-The wise person does nothing that he could regret, nothing against his will, but does everything honourably, consistently, seriously, and rightly; he anticipates nothing as if it is bound to happen, but is shocked by nothing when it does happen …. and refers everything to his own judgement, and stands by his own decisions. I can conceive of nothing which is happier that this.</description>
-            <content type="html"><![CDATA[<p><img src="/images/1669160376/stoic-week.png" alt="Stoic Week Image"></p>
-<ul>
-<li><a href="#morning">Morning</a></li>
-<li><a href="#afternoon">Afternoon</a></li>
-<li><a href="#evening">Evening</a></li>
-</ul>
-<hr>
-<h2 id="morning">Morning</h2>
-<blockquote>
-<p>Morning Text for Reflection</p>
-<p>The wise person does nothing that he could regret, nothing against his will, but does everything honourably, consistently, seriously, and rightly; he anticipates nothing as if it is bound to happen, but is shocked by nothing when it does happen …. and refers everything to his own judgement, and stands by his own decisions. I can conceive of nothing which is happier that this. – Cicero, Tusculan Disputations 5.81</p>
-</blockquote>
-<p style="text-align: center;">...</p>
-<blockquote>
-<p><em>Perfection is the enemy of good.</em></p>
-</blockquote>
-<p>I&rsquo;ve always liked that saying, we say it a lot in the developer-world, as the puersuit of perfection often distracts us from getting something good done instead. I&rsquo;ve always, somewhat, disliked the idea of <em><a href="https://en.wikipedia.org/wiki/Sage_(philosophy)">the Sage</a></em> in Stoicism, because in the past I used to obsess over the idea of perfection and all I got from that was the constant diss-appointment of falling short. I think the first task of the Stoic is to admit they will fall short, otherwise how can they even <em>be</em> a Stoic.</p>
-<p>This is why I love Marcus Aurelius so much, because it&rsquo;s obvious he thought he was flawed, that he <em>too</em> fell short. I think it&rsquo;s important to realize that a <em>part of being a Stoic</em> is failing and falling short. Stoicism wouldn&rsquo;t exist if we didn&rsquo;t fail to be happy <em>all the time</em>. I always try and remember, too, that even the one&rsquo;s we venerate, i.e. <em>the big four</em>, were likely also flawed, what skeletons did they have in their closets?</p>
-<blockquote>
-<p>“The reason that most of us are unhappy most of the time is that we set our goals not for the person we’re going to be when we reach them, but we set our goals for the person we are when we set them. - Jim Coudal</p>
-</blockquote>
-<p>Like <a href="https://m.signalvnoise.com/ive-never-had-a-goal/">Jason Fried</a>, I think it&rsquo;s un-wise to have goals and statuses to achieve, e.g. <em>one day I will be free from desire.</em> I scoff as I write that, lol. Instead I think if you continue to work at being a Stoic just for the sheer <em>fun</em> of it, because you <em>like</em> being a Stoic, is more important. Otherwise, you grow dis-satisfied and burnt-out.</p>
-<p>Being happy is tricky, but I&rsquo;ve always been convinced that I&rsquo;m the only one in the way of finding happiness. That my own mind, imagination, and cravings are all I need to learn to control. That&rsquo;s why Stoicism appealed so much to me. The idea that you could get out of your own way, and be happy gave me hope&hellip;</p>
-<p>The last thing this passage reminds me of is the power of regret. Every evening I ask myself the question (in my journal), <em>&ldquo;What would you regret, had you met death today?&quot;</em> I write down what I might regret in a moment of death that day (along with how I might have come to that situation as a practice of <em><a href="https://en.wikipedia.org/wiki/Negative_visualization">negative visualization</a></em>), e.g. I got hit suddenly by a car or something. Dying without regret is such a powerful motivator for me. The thought of looking back at myself in that short moment and not feeling like I was a fool to be unhappy for stupid reasons sounds like a great way to die.</p>
-<p>So I implor myself, and you, <em>Memento Mori</em>, or, remember how you would like to feel in your last moments. Will it be one filled with regret? Marcus always implors himself to get to it, while he can, while he is not too old, I think, in order that he may not regret the time and virility he (and we) have <em>today</em>.</p>
-<hr>
-<h2 id="afternoon">Afternoon</h2>
-<blockquote>
-<p>Happiness, in modern terms, tends to mean having certain emotions (‘feeling happy’) or pleasurable experiences. Ancient thinkers saw happiness (Greek, eudaimonia) as the overall goal or purpose of your life, the aim that gives meaning and shape to your life as a whole. They sometimes defined happiness as living in a certain way, a way that you can yourself determine by your own efforts. During this lunchtime, spend a few minutes thinking about happiness in this way and also reflecting on the Stoic idea of happiness&hellip; Do you think the Stoic idea of happiness could help you give more focus and coherence to your life?</p>
-</blockquote>
-<p>I, of course, think about happiness a lot. Although the Stoic ideal is to live virtuously, I still am a Stoic because I want to be happy. By happy, I mostly mean free. Freedom, I think, is the ultimate happiness, and yes I think Stoicism is the way to get there. Mostly being happy (and free) has to do with freeing myself from&hellip;myself. If I could only not tourture myself, lol, I think I would be happy.</p>
-<blockquote>
-<p>Imagine that the pandemic is over - what core values would you want to have lived by?</p>
-</blockquote>
-<p>For me, I think wisdom. I think being a part of the pandemic issue (being the humans who contract it) I think it&rsquo;s most important to think of Justice. Which, for me this week has a bit of a new twist: a social duty in order that you may not end up being a fool. If you think that an unhealthy society is benefitial for you, I would say that person is foolish.</p>
-<blockquote>
-<p>Imagine that you are telling the story of what you did in the great pandemic of 2020 to your grandchildren, perhaps many years from now. What would you want to say about what you did?</p>
-</blockquote>
-<p>I think calmly doing what I can. I never fret about other people e.g. not wearing masks, <em>that is nothing to me.</em> But as for me, I did my duty by being safe, mindful of contracting and spreading it, and basically using my common sense.</p>
-<p><em>Note, my afternoon writing actually happened in the evening&hellip;</em></p>
-<hr>
-<h2 id="evening">Evening</h2>
-<blockquote>
-<p>Will there come a day, my soul, when you are good and simple and unified</p>
-</blockquote>
-<p>I can already tell this is <em>Meditations</em> lol&hellip;.</p>
-<blockquote>
-<p>&hellip;some day will you have a taste of a loving and affectionate disposition? Some day will you be satisfied and want for nothing&hellip; Or will you be contented instead with your present circumstances and delighted with everything around you and convince yourself that all you have comes from the gods, and that all that is pleasing for them is well for you? Will there come a day when you are so much a member of the community of gods and humans as neither to bring any complaint against them nor to incur their indignation? – Marcus Aurelius, Meditations, 10.1</p>
-</blockquote>
-<h3 id="reflection">Reflection</h3>
-<p>I always feel Marcus' struggle. As I mentioned <a href="#morning">this morning</a> I no-longer have <em>goals</em> per-se, but rather focus on being a Stoic simply because of how much I enjoy it, trusting that each and everyday will gradually bring me to the place all of us (Stoics) want to be.</p>
-]]></content>
-        </item>
         
-        <item>
-            <title>Apple Watch SE Review</title>
-            <link>https://aubreypwd.com/apple-watch-se-watch-os-7-review/</link>
-            <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-            
-            <guid>https://aubreypwd.com/apple-watch-se-watch-os-7-review/</guid>
-            <description>About 2 weeks ago I bought an Apple Watch SE. This is my review/experience so far.
+        
+          So, the last few weeks I&amp;rsquo;ve had a thing happen since switching to a MacBook Air recently. Since the CPU is not up to snuff as my old MacBook Pro (more to come on this switch later ⌨️), Sublime Text would hang for about a second on save of a file in a large project.
+This likely went un-notice on my 2.7Ghz MacBook Pro, but started to notice it on my Air.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Stoic Week 2020: Sunday (Monday Makeup)</title>
+      <link>https://aubreypwd.com/stoic-week-2020-sunday-makeup/</link>
+      <pubDate>Mon, 26 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/stoic-week-2020-sunday-makeup/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Morning Afternoon Evening   Morning  The works of the gods are full of providence, and the works of fortune are not separate from nature or the interweaving and intertwining of the things governed by providence. Everything flows from there. Further factors are necessity and the benefit of the whole universe, of which you are a part. What is brought by the nature of the whole and what maintains that nature is good for each part of nature.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Stoic Week 2020: Saturday</title>
+      <link>https://aubreypwd.com/stoic-week-2020-saturday/</link>
+      <pubDate>Sat, 24 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/stoic-week-2020-saturday/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Morning Evening   Morning  Be like the headland, on which the waves break constantly, which still stands firm, while the foaming waters are put to rest around it. ‘It is my bad luck that this has happened to me.’ On the contrary, say, ‘It is my good luck that, although this has happened to me, I can bear it without getting upset, neither crushed by the present nor afraid of the future.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Stoic Week 2020: Friday</title>
+      <link>https://aubreypwd.com/stoic-week-2020-friday/</link>
+      <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/stoic-week-2020-friday/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Morning Afternoon Evening   Morning  It isn’t the things themselves that disturb people, but the judgements that they form about them. Death, for instance, is nothing terrible, or else it would have seemed so to Socrates too; no, it is in the judgement that death is terrible that the terror lies. Accordingly, whenever we are impeded, disturbed or distressed, we should never blame anyone else but only ourselves, that is, our judgements.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Stoic Week 2020: Thursday</title>
+      <link>https://aubreypwd.com/stoic-week-2020-thursday/</link>
+      <pubDate>Thu, 22 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/stoic-week-2020-thursday/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Morning Afternoon Evening   Morning  It is important to understand that nature creates in parents affection for their children; and parental affection is the source from which we trace the shared community of the human race … As it is obvious that it is natural to us to shrink from pain, so it is clear that we derive from nature itself the motive to love those to whom we have given birth.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Stoic Week 2020: Wednesday</title>
+      <link>https://aubreypwd.com/stoic-week-2020-wednesday/</link>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/stoic-week-2020-wednesday/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Morning Afternoon Evening   Morning  If you can find anything in human life better than justice, truthfulness, self-control, courage turn to it with all your heart and enjoy the supreme good that you have found but if you find all other things to be trivial and valueless in comparison with virtue, give no room to anything else, since, once you turn towards that and divert from your proper path, you will no longer be able without inner conflict to give the highest honour to what is properly good.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Stoic Week 2020: Tuesday</title>
+      <link>https://aubreypwd.com/stoic-week-2020-tuesday/</link>
+      <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/stoic-week-2020-tuesday/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Morning Afternoon Evening   Morning  Morning Text for Reflection
+The wise person does nothing that he could regret, nothing against his will, but does everything honourably, consistently, seriously, and rightly; he anticipates nothing as if it is bound to happen, but is shocked by nothing when it does happen …. and refers everything to his own judgement, and stands by his own decisions. I can conceive of nothing which is happier that this.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Apple Watch SE Review</title>
+      <link>https://aubreypwd.com/apple-watch-se-watch-os-7-review/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://aubreypwd.com/apple-watch-se-watch-os-7-review/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          About 2 weeks ago I bought an Apple Watch SE. This is my review/experience so far.
 Note that I do not sync things to my watch, as I prefer to play most things directly from my iPhone, just a quick note for the below, as I&amp;rsquo;m not doing any syncing for Music, Audiobooks, and Podcasts.
-The Bad Audiobooks &amp;amp; Podcasts Show Wrong Episode As you can see I&amp;rsquo;m listening to The Daily Stoic, but it&amp;rsquo;s showing Stoicism on Fire!</description>
-            <content type="html"><![CDATA[<p>About 2 weeks ago I bought an <a href="https://www.apple.com/apple-watch-se/">Apple Watch SE</a>. This is my review/experience so far.</p>
-<p><em>Note that I do not sync things to my watch, as I prefer to play most things directly from my iPhone, just a quick note for the below, as I&rsquo;m not doing any syncing for Music, Audiobooks, and Podcasts.</em></p>
-<h2 id="the-bad">The Bad</h2>
-<h3 id="audiobooks--podcasts-show-wrong-episode">Audiobooks &amp; Podcasts Show Wrong Episode</h3>
-<p><img src="/images/2308529140/IMG_0905.JPG" alt=""></p>
-<p><img src="/images/2308529140/IMG_0906.PNG" alt=""></p>
-<p>As you can see I&rsquo;m listening to <a href="https://dailystoic.com/podcast/">The Daily Stoic</a>, but it&rsquo;s showing <a href="https://podcasts.apple.com/us/podcast/stoicism-on-fire/id1368482721">Stoicism on Fire</a>!</p>
-<p>When I play/pause it plays/pauses whatever is playing on my iPhone, but it shows the wrong thing. Also when you start up e.g. Podcasts on my watch, it starts to autoplay the wrong episode, making where I <em>really</em> was on my iPhone now off-track; e.g. with the above episodes, if I open my watch via the Apps area it will play Stoicism on Fire, even though I was playing an episode on The Daily Stoic.</p>
-<p><em>This same experience on Audiobooks!</em></p>
-<h3 id="i-cant-select-genres-in-music">I can&rsquo;t select Genres in Music</h3>
-<p>So one of my favorite genres of music (when I&rsquo;m in my car) is Country (from my library), and on my phone I can just select the Country genre and shuffle, but I can&rsquo;t do this on my watch.</p>
-<p><img src="/images/2308529140/IMG_0909.jpg" alt=""></p>
-<p>It shows Playlists, Artists, Albums and Songs, no Genre. Not a deal-breaker but I usually listen to my music using Genres when I&rsquo;m on my iPhone or Mac.</p>
-<h4 id="update-music-genre">Update!</h4>
-<p>I was able to figure out a <em>way</em> to do this using a Smart Playlist that populates with Country music genre:</p>
-<p style="text-align:center">
-    <img src="/images/1343508415/IMG_0913.PNG" alt="" style="margin:auto" />
-</p>
-<h3 id="i-cant-tell-it-to-play-one-track-in-audiobooks">I can&rsquo;t tell it to play one track in Audiobooks</h3>
-<p>I listen to a <em>lot</em> of audiobooks, and one of my favorite features on the phone is the one where you can tell it to stop after the current track finishes. I can&rsquo;t get this feature when listening to an audiobook on the watch. It will continue to the next track no matter what.</p>
-<h3 id="the-crown-sticks">The Crown Sticks</h3>
-<p>I haven&rsquo;t really got a lot of benefit out of the workouts yet, but when I play Tennis 🎾 the sweat, the next morning, usually makes the crown stick. I usually have to wash it under water (spinning it under hot water) to get it to work, but having to wash it makes me super nervous too. I know it&rsquo;s water resistant, but still&hellip;</p>
-<h2 id="the-good">The Good</h2>
-<h3 id="the-face--complications">The Face &amp; Complications</h3>
-<p>I currently have 8 complication setup:</p>
-<ol>
-<li>Your schedule</li>
-<li>Reminders</li>
-<li>Voice Memos</li>
-<li>Music</li>
-<li>The date</li>
-<li>Battery</li>
-<li>Weather</li>
-</ol>
-<p>Note, I just tried to take a screenshot of my face using the double button thing&hellip;.it restarted my watch 😒, so here&rsquo;s a photo of my hairy arms:</p>
-<p><img src="/images/2308529140/IMG_0912.jpg" alt=""></p>
-<p>Having my next meeting on my watch has reduced the need for <a href="https://apps.apple.com/us/app/next-meeting/id1017470484?mt=12">Next Meeting</a> on my Mac. Also seeing how many todo&rsquo;s I have today is great! The weather is nice to because I have a rule: if it&rsquo;s below 70, I wear pants lol. So, making this decision everyday is even quicker! Also being able to start voice memos and control my music (usually in my car) is super nice (for the most part).</p>
-<h3 id="reminders">Reminders</h3>
-<p>I just went shopping, and being able to go through my shopping list on my watch/wrist vs. having to pull out my iPhone (an iPhone 8 Plus) is almost the #1 reason I will keep my watch no matter what! But also being able to look through my todos is super nice!</p>
-<h3 id="voice-memos">Voice Memos</h3>
-<p>I&rsquo;m a pretty forgetful person, or when I have a good idea it&rsquo;s nice to be able to make an audio note in seconds vs., again, having to pull my iPhone out. Plus, it just works!</p>
-<h3 id="calendar">Calendar</h3>
-<p>Aside from the cool complication I noted above, being able to see my schedule at a glance is super nice. I use it mostly for a quick glance in the morning to see if I have any last-minute morning meetings I need to get to, or when someone asks me if I have time to do something, I don&rsquo;t have to pull out my iPhone to give a quick answer.</p>
-<h3 id="the-design">The Design</h3>
-<p>I love wearing this thing. I wear it all the time, except when I sleep (when I charge it). It&rsquo;s just the perfect thing to have on my writst, and the default band that came with it is perfect!</p>
-<h3 id="the-battery">The Battery</h3>
-<p>The battery has been super good. I usually have 30/40% left by the time I go to bed. No problems there (probably don&rsquo;t need the complication).</p>
-<h3 id="notifications">Notifications</h3>
-<p>Being able to quickly see a notification (that would otherwise buzz in my pocket) at a glance has been super convinient (especially when driving). Also being able to respond to e.g. a text message quickly is also very helpful and convinient.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>When the watch is bad, it&rsquo;s bad. One of the big things that got me to buy this thing was the convienence of controling things when I drive (I like to drive a lot) and so when it doesn&rsquo;t work I&rsquo;m usually screwing with my watch and iPhone in my car at the same time and it&rsquo;s stressful (not to mention dangerous). I want this thing to just work! I feel, if they did, the watch would be perfect!</p>
-<p>But, at the same time it&rsquo;s been super useful and helpful&hellip;so I&rsquo;m very much on the wall about the watch. I probably will keep it, but it will end up being really annoying if I have to whip out my iPhone to listen to a Podcast or Audiobook because the problems above don&rsquo;t resolve eventually.</p>
-<p>I really hope the issues with the things above iron out, because I would really love to love this device more!</p>
-]]></content>
-        </item>
+The Bad Audiobooks &amp;amp; Podcasts Show Wrong Episode As you can see I&amp;rsquo;m listening to The Daily Stoic, but it&amp;rsquo;s showing Stoicism on Fire!
+          
         
-        <item>
-            <title>My Stoic Five-minute Journal</title>
-            <link>https://aubreypwd.com/stoic-five-minute-journal/</link>
-            <pubDate>Sat, 26 Sep 2020 03:17:00 -0600</pubDate>
-            
-            <guid>https://aubreypwd.com/stoic-five-minute-journal/</guid>
-            <description>So the last month or so I&amp;rsquo;ve been journaling a little bit different. A while go, I ran across a video that went over the idea of the Five Minute Journal, and I was intrigued.
+        </description>
+    </item>
+    
+    <item>
+      <title>My Stoic Five-minute Journal</title>
+      <link>https://aubreypwd.com/stoic-five-minute-journal/</link>
+      <pubDate>Sat, 26 Sep 2020 03:17:00 -0600</pubDate>
+      
+      <guid>https://aubreypwd.com/stoic-five-minute-journal/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          So the last month or so I&amp;rsquo;ve been journaling a little bit different. A while go, I ran across a video that went over the idea of the Five Minute Journal, and I was intrigued.
 The idea is you answer a few simple prompts:
- I am grateful for: What would make today great? Daily affirmation. I am: 3 Amazing things that happened today: How could I have made today even better:  &amp;hellip;and I did that for about a week before I felt it lacked a Stoic-seasoning, and so I worked and re-worked that format until I landed on a format that has both accomplish the goal of making journaling a little easier and getting your Stoic practice in.</description>
-            <content type="html"><![CDATA[<p><img src="/images/IMG_0840.jpg" alt="A photo of my journal on my desk."></p>
-<p>So the last month or so I&rsquo;ve been journaling a little bit different. A while go, I ran across a <a href="https://www.youtube.com/watch?v=UFdR8w_R1HA">video</a> that went over the idea of the <em>Five Minute Journal</em>, and I was intrigued.</p>
-<p>The idea is you answer a few simple prompts:</p>
-<ul>
-<li>I am grateful for:</li>
-<li>What would make today great?</li>
-<li>Daily affirmation. I am:</li>
-<li>3 Amazing things that happened today:</li>
-<li>How could I have made today even better:</li>
-</ul>
-<p>&hellip;and I did that for about a week before I felt it lacked a Stoic-seasoning, and so I worked and re-worked that format until I landed on a format that has both accomplish the goal of making journaling a little easier <em>and</em> getting your Stoic practice in.</p>
-<p>I would recommend giving <a href="https://dailystoic.com/prepare-morning-review-evening/">this</a> a read before you look into the morning and evening prompts below.</p>
-<hr>
-<h2 id="morning-prompts">Morning Prompts</h2>
-<h4 id="i-am-looking-forward-to">I am looking forward to:</h4>
-<p>This prompt is like &ldquo;I am grateful for&rdquo; but it aims to make sure you look forward to something during the day. All to often we wake up and head right into doing things in a todo list, but identifying those things which you are looking forward to doing (note, that doesn&rsquo;t have to be something in your todo list) makes the outlook for the day that much better.</p>
-<h4 id="example">Example</h4>
-<ul>
-<li>Hanging out with my kids tonight</li>
-<li>Being productive (insert specific important task today)</li>
-<li>Reading time</li>
-</ul>
-<h3 id="how-can-i-make-today-great">How can I make today great?</h3>
-<p>Much like &ldquo;What would make today great&rdquo; prompt from the classic form, I found this to be really powerful when I was working with the five-minute journal idea. The focus, though, is on how <em>you</em> can make today great and what <em>you are in control of</em>, which are <em>your</em> actions!</p>
-<h4 id="example-1">Example</h4>
-<ul>
-<li><input disabled="" type="checkbox"> Sticking to my diet so I feel better about myself today</li>
-<li><input disabled="" type="checkbox"> Not letting other people&rsquo;s opinions and actions bother me</li>
-</ul>
-<p>Note, these get written as tasks, because later on I will check off the one&rsquo;s I honored throughout the day as a part of my evening review.</p>
-<h3 id="what-can-i-do-towards-my-weekly-goal">What can I do towards my weekly goal?</h3>
-<p>Every week I choose a verse/concept from Stoicism to focus on, for instance this week was:</p>
-<blockquote>
-<p>Reverence &amp; Service to Others</p>
-</blockquote>
-<p><em>FYI, this is a positive quality Marcus associated with his mother.</em></p>
-<p>But, then I choose a few <em>actionable</em> things I can do to put this into practice today, and I stick to the theme all week with new things to put it into practice everyday.</p>
-<h4 id="example-2">Example</h4>
-<ul>
-<li><input disabled="" type="checkbox"> Serve someone who doesn&rsquo;t deserve it</li>
-<li><input disabled="" type="checkbox"> Show respect to your children</li>
-</ul>
-<h3 id="what-can-i-do-to-improve-today">What can I do to improve today?</h3>
-<p>Here I choose a couple other qualities I want to improve on (often these repeat throughout the week) that I struggle with.</p>
-<h4 id="example-3">Example</h4>
-<ul>
-<li><input disabled="" type="checkbox"> Stick to my diet</li>
-<li><input disabled="" type="checkbox"> Don&rsquo;t be harsh with my kids when they get out of hand</li>
-</ul>
-<h3 id="what-will-go-wrong">What will go wrong?</h3>
-<p>This is where I take all the above aspirations and I think about what could go wrong, and what I would do.</p>
-<h4 id="example-4">Example</h4>
-<ul>
-<li>I may be tempted to eat the donuts someone brought home this morning
-<ul>
-<li><input disabled="" type="checkbox"> Meditation on how good you will feel if you unhinge yourself from this temptation</li>
-<li><input disabled="" type="checkbox"> Drink a glass of water w/ salt</li>
-</ul>
-</li>
-<li>Kids may get out of hand and get crazy
-<ul>
-<li><input disabled="" type="checkbox"> See this as a part of nature, kids will be kids</li>
-</ul>
-</li>
-</ul>
-<p>I get really deep on this and go through every aspect of my day that I can, jotting down what might trouble me or not meet my expectations and develop a plan for as much as I can.</p>
-<hr>
-<h2 id="evening-prompts">Evening Prompts</h2>
-<p>The first thing I do in the evening is review my morning prompts, marking off items I stuck to and items I did not sick to as a primer for the content I will write below.</p>
-<h3 id="a-humbling-moment">A humbling moment</h3>
-<p>This plays into the practice of <a href="https://dailystoic.com/premortem/">negative visualization</a>, and I either take a moment from the day (for instance I saw a homeless man today having trouble dragging his cart which had a broken wheel across the street) or I imagine one and reflect on it, putting myself in their shoes and noting how I would be a good stoic in that situation. Though this practice is a preparation, I find it serves (more practically) as a gratefulness practice.</p>
-<h3 id="great-things-that-happened-today">Great things that happened today:</h3>
-<p>This comes right out of the five minute journal. Remembering and taking note for the great things in your life cultivates contentedness.</p>
-<h4 id="example-5">Example</h4>
-<ul>
-<li>That my children are healthy and beautiful</li>
-<li>That the weather was nice at the park today</li>
-<li>That I have time to read about Stoicism</li>
-</ul>
-<h3 id="what-went-wrong-and-what-could-i-have-done-better">What went wrong (and what could I have done better)?</h3>
-<p>Yes this is really two questions, but here I jot down, what went wrong. That&rsquo;s either via external circumstances or actions I did not do well. I also note what I could do better. I take lots of care here to note what I am and not in control of.</p>
-<h4 id="example-6">Example</h4>
-<ul>
-<li>I got harsh with Lexie when she was screaming while playing</li>
-</ul>
-<p>Kids will be kids (you are not in control of what they decided to do ultimately), and they have a lot of learning to do. My bodily response to this (frustration) does not control that I could have chosen to speak softly and kindly about what they should do, and shouldn&rsquo;t, and why.</p>
-<h3 id="if-you-died-today-will-you-have-died-well">If you died today, will you have died well?</h3>
-<p>This is something I have always written on at the end of my day, and so it <em>had</em> to be adopted into this format. I think the best gift a person can give to themselves is a good death, but that can only be done by being happy with yourself.</p>
-<hr>
-<h2 id="conclusion">Conclusion</h2>
-<p>And that&rsquo;s it! I have had a wonderful time with this format vs. some of the others I have done in the past and I have felt it has helped be both prepare for my day, and end my day well. If you try it out, let me know how it goes!</p>
-]]></content>
-        </item>
+ I am grateful for: What would make today great? Daily affirmation. I am: 3 Amazing things that happened today: How could I have made today even better:  &amp;hellip;and I did that for about a week before I felt it lacked a Stoic-seasoning, and so I worked and re-worked that format until I landed on a format that has both accomplish the goal of making journaling a little easier and getting your Stoic practice in.
+          
         
-        <item>
-            <title>De-centralizing my system configurations: dotfiles</title>
-            <link>https://aubreypwd.com/de-centralize-configs-gitconfig-gitignore/</link>
-            <pubDate>Fri, 18 Sep 2020 12:28:58 -0600</pubDate>
-            
-            <guid>https://aubreypwd.com/de-centralize-configs-gitconfig-gitignore/</guid>
-            <description>Note, I&amp;rsquo;ve entirely ditched this system and opted for a new one I will post about later.
+        </description>
+    </item>
+    
+    <item>
+      <title>De-centralizing my system configurations: dotfiles</title>
+      <link>https://aubreypwd.com/de-centralize-configs-gitconfig-gitignore/</link>
+      <pubDate>Fri, 18 Sep 2020 12:28:58 -0600</pubDate>
+      
+      <guid>https://aubreypwd.com/de-centralize-configs-gitconfig-gitignore/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Note, I&amp;rsquo;ve entirely ditched this system and opted for a new one I will post about later.
  Today I did some experimenting. You see my system is entirely customized to be super-efficient and automated.
 
-As you can see I currently have these housed in a giant Git repository in my ~/.config/. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.</description>
-            <content type="html"><![CDATA[<p><em>Note, I&rsquo;ve <a href="https://twitter.com/aubreypwd/status/1307807612646219776?s=20">entirely ditched</a> this system and opted for a new one I will post about later.</em></p>
-<hr>
-<p>Today I did some experimenting. You see my system is entirely customized to be super-efficient and automated.</p>
-<p><a href="/images/greenshot-2020-09-18-184905.png"><img src="/images/greenshot-2020-09-18-184905.png" alt="Screenshot of my current .config"></a></p>
-<p>As you can see I currently have these housed in a giant Git repository in my <code>~/.config/</code>. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.</p>
-<p>Today I focused on my <code>.gitconfig</code> and <code>.gitignore</code> files as an experiment with just my &ldquo;dot-files&rdquo;, and this is what I&rsquo;ve come up with:</p>
-<p>So I wantedo to figure out what package manager is going to best serve me here. After looking at a lot of them, e.g. npm, bpkg, composer, and a slew of others, I settled on spamming Composer. I know my &ldquo;packages&rdquo; are not PHP, but Composer doesn&rsquo;t care about that, plus of all the package managers it&rsquo;s the easiest to install with git repo support (try doing that with npm or other package managers out there), it manages them well in a reliable location, and on top of that with <code>composer-installers</code> I think I can do some really cool magic later on&hellip;</p>
-<p>So I settled on Composer, hate me.</p>
-<p>So first I got my <code>.gitignore</code> and <code>.gitconfig</code> files into their own packages:</p>
-<ul>
-<li><a href="https://github.com/aubreypwd/.gitconfig">https://github.com/aubreypwd/.gitconfig</a></li>
-<li><a href="https://github.com/aubreypwd/.gitignore">https://github.com/aubreypwd/.gitignore</a></li>
-</ul>
-<p>&hellip;that I could now easliy install to a reliable place, <code>~/.composer</code>. Both packages automatically symlink my <code>~/.gitconfig|ignore</code> file for me using the <a href="https://packagist.org/packages/sioweb/ccevent"><code>/sioweb/ccevent</code></a> package. Even if you supply, e.g. a <code>post-package-install</code> script for the package, because you install it as a dependancy those scripts to not fire. But this package, when installed along side it, will look for <code>package-scripts</code> and run those, so I was able to add that to both packages and when you install them that automatically runs and runs a <code>symlink.sh</code> script.</p>
-<p>This symlinking solution on install is great because once I install one of these packages, it symlinks my dot-file in <code>$HOME</code> for me, vs me having to do it manually.</p>
-<p>So now I can install dot-files individually and I can automate symlinking them!</p>
-<p>I&rsquo;m very curious how the rest of this experiment is going to go&hellip;</p>
-]]></content>
-        </item>
+As you can see I currently have these housed in a giant Git repository in my ~/.config/. This has worked out just fine for a while, but I wanted to experiment with trying to de-centralize it with some kind of package management.
+          
         
-        <item>
-            <title>Hello World</title>
-            <link>https://aubreypwd.com/hello-world/</link>
-            <pubDate>Sat, 08 Aug 2020 12:28:58 -0600</pubDate>
-            
-            <guid>https://aubreypwd.com/hello-world/</guid>
-            <description>Today I had a lot of fun building a new site for aubreypwd.com using Hugo and Github Pages.
- I haven&amp;rsquo;t had a lot of time to work on a website, let alone write content for one. In fact, I used to have a pretty nice site, but I never kept up with it, and eventually just redirected it to Twitter. I also tried out write.as to try and publish content, but I found I didn&amp;rsquo;t really use it a lot.</description>
-            <content type="html"><![CDATA[<p>Today I had a lot of fun building a new site for <strong><a href="/">aubreypwd.com</a></strong> using <strong><a href="https://gohugo.io/">Hugo</a></strong> and <strong><a href="https://pages.github.com/">Github Pages</a></strong>.</p>
-<hr>
-<p>I haven&rsquo;t had a lot of time to work on a website, let alone write content for one. In fact, I used to have a pretty nice site, but I never kept up with it, and eventually just redirected it to Twitter. I also tried out <a href="https://write.as">write.as</a> to try and publish content, but I found I didn&rsquo;t really use it a lot.</p>
-<p>The kind of site I&rsquo;ve always wanted is just a simple one: a bit about who I am with links to all the things you can use to find out more about me. Content is sort of a meh—I&rsquo;d rather be coding :)—and I usually blog over <a href="https://webdevstudios.com/author/aubreypwd/">@WebDevStudios</a> anyways.</p>
-<p>Really, this isn&rsquo;t even a blog, the only reason I enabled posts is so I could post updates every once in a while&hellip; and maybe content&hellip; but don&rsquo;t hold your breath, I mostly post on <a href="https://twitter.com/aubreypwd">Twitter</a>.</p>
-<h2 id="hugo">Hugo?</h2>
-<p>I&rsquo;ve always wanted a dead-simple site, I also want a site that is totally under version control (content and all). WordPress doesn&rsquo;t do that, Hugo does. Plus, it was fun to learn and use something new, and was much easier than (<em>but similar enought to</em>) <a href="https://jekyllrb.com/">Jekyll</a> to setup. I would hightly recommend it!</p>
-<p>This site is going to be much easier to maintain and deploy than a WordPress one. Also, I could write in Markdown natively, which felt warm-and-fuzzy.</p>
-]]></content>
-        </item>
+        </description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://aubreypwd.com/hello-world/</link>
+      <pubDate>Sat, 08 Aug 2020 12:28:58 -0600</pubDate>
+      
+      <guid>https://aubreypwd.com/hello-world/</guid>
+      <description>
         
-        <item>
-            <title>Better words for stoic virtues</title>
-            <link>https://aubreypwd.com/better-words-for-stoic-virtues/</link>
-            <pubDate>Fri, 03 Jul 2020 03:17:00 -0600</pubDate>
-            
-            <guid>https://aubreypwd.com/better-words-for-stoic-virtues/</guid>
-            <description>This article was moved from thebadstoic.com, which may no longer be active.
+          
+          
+          
+        
+        
+        
+          Today I had a lot of fun building a new site for aubreypwd.com using Hugo and Github Pages.
+ I haven&amp;rsquo;t had a lot of time to work on a website, let alone write content for one. In fact, I used to have a pretty nice site, but I never kept up with it, and eventually just redirected it to Twitter. I also tried out write.as to try and publish content, but I found I didn&amp;rsquo;t really use it a lot.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Better words for stoic virtues</title>
+      <link>https://aubreypwd.com/better-words-for-stoic-virtues/</link>
+      <pubDate>Fri, 03 Jul 2020 03:17:00 -0600</pubDate>
+      
+      <guid>https://aubreypwd.com/better-words-for-stoic-virtues/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          This article was moved from thebadstoic.com, which may no longer be active.
  Traditionally, the words for the four primary virtues of Stoicism are:
  Wisdom Justice Courage Temperance  If you’re about to do a thing, you ask yourself:
- Am I being Wise? Am I being Just? Am I being Courageous? Am I being Temperate?  But, none of these words have ever really meant much for me.</description>
-            <content type="html"><![CDATA[<hr>
-<p>This article was moved from <em>thebadstoic.com</em>, which may no longer be active.</p>
-<hr>
-<!-- wp:paragraph -->
-<p>Traditionally, the words for the four primary virtues of Stoicism are:</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>
-<li><strong>Wisdom</strong></li>
-<li><strong>Justice</strong></li>
-<li><strong>Courage</strong></li>
-<li><strong>Temperance</strong></li>
-</ul>
-<!-- /wp:list -->
-<!-- wp:paragraph -->
-<p>If you’re about to do a thing, you ask yourself:</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>
-<li>Am I being <strong>Wise</strong>?</li>
-<li>Am I being <strong>Just</strong>?</li>
-<li>Am I being <strong>Courageous</strong>?</li>
-<li>Am I being <strong>Temperate</strong>?</li>
-</ul>
-<!-- /wp:list -->
-<!-- wp:paragraph -->
-<p>But, none of these <em>words</em> have ever really <em>meant</em> much for me<em>. </em>They don’t reach out to me and explain themselves very well. They’re very academic sounding, lofty, and words that don’t guide me towards my next action. Sometimes they leave me asking, <em>what do I even do?</em></p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>So, I’ve come up with my own <em>words</em> for these virtues:</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading {"level":1} -->
-<h2 id="0f11">Wisdom → Truth</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>What does Wisdom <em>really</em> mean? — <em>I think</em> it means looking at the world clearly and truthfully. It’s all about the correct knowledge of what’s in front of you:</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>
-<li>What is <em>really</em> happening right now?</li>
-<li>Am I truly in danger of being fired? Is this just my mind racing away from me?</li>
-<li>What is this person’s story, why are they <em>really </em>acting this way?</li>
-<li>Why is this bothering me? Is it really that bothersome? Is <em>it</em> actually bothering me, or is it just my attitude towards this thing?</li>
-</ul>
-<!-- /wp:list -->
-<!-- wp:paragraph -->
-<p>Too often we look at a given situation and judge it almost <em>immediately</em> for face value. Marcus (and Epictetus) tell us to not to <em>trust first appearances</em>, especially within our own mind. I think this is at the heart of <em>Wisdom.</em> It’s the ability to dissect and analyze any given perception or thing for its truth, absent (mostly) of our own judgements and opinions — <em>seeing things for what they truly are</em>.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>Marcus asks us, all the time in the <em>Meditations</em>, to wipe our opinions clean and change them <em>right on the spot</em>! But, it would be wrong to think that Marcus is asking us to just have some change of heart out of no-where. To change our opinions, we need <em>knowledge</em> and that knowledge needs to be based on <em>truth</em> and examination.</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>
-<li>Why am I so upset about the dog digging a hole in the yard, is it really that hard to fix? Is the dog <em>trying</em> to hurt my feelings? I’m acting as if he is!</li>
-<li>Is the universe really out to get me? I <em>just</em> got a flat tire because of a nail, and it looks like it fell off a truck on the highway, the guy must have been in a rush for some reason — maybe to get to his next job he dearly needs.</li>
-</ul>
-<!-- /wp:list -->
-<!-- wp:paragraph -->
-<p>It’s the <em>pause</em> you take to look at something for what it <em>really</em> is, not what you <em>think it is. </em>Or, the gall to admit you don’t know enough. With experience this becomes easier, <em>obviously</em>, but nothing stops us from pausing and acting when we feel we have the truth of the matter<em>, </em>or admitting that we don’t have all the information to act.</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading {"level":1} -->
-<h2 id="d236">Justice → Service</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Justice, if you’re like me, comes off very <em>noble (rightfully so) </em>and <em>legislative,</em> and more concerned about <em>weighing</em> what is right and wrong instead of what actually <em>is</em> right and wrong. In the books of the Stoics, Justice comes off more personal and neighborly to me. I use a version of the <em>Golden Rule</em> as a reminder:</p>
-<!-- /wp:paragraph -->
-<!-- wp:quote -->
-<blockquote class="wp-block-quote">
-<p>Serve others the way you would serve yourself</p>
-</blockquote>
-<!-- /wp:quote -->
-<!-- wp:paragraph -->
-<p>It’s a <em>reflective</em> virtue.<em> It comes with a built-in manual</em>: if you want something <em>for</em> <em>yourself</em>, ensure <em>others</em> get it as well!</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>
-<li>You want “me-time?” Give others “me-time”!</li>
-<li>If you want to be understood, try and understand others.</li>
-<li>If you hate doing the dishes, don’t expect others to enjoy doing the dishes.</li>
-<li>If you want to be wealthy, help others be wealthy!</li>
-</ul>
-<!-- /wp:list -->
-<!-- wp:paragraph -->
-<p>The word s<em>erve</em> is important, because it’s not enough to just to “<em>treat</em> others the way you would want to be treated” (which implies that you only do this when you come into contact with them), but <em>serving</em> someone with justice is a <em>duty</em> and asks of you to <em>go out</em> and help others gain the very things <em>you</em> want out of life.</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading {"level":1} -->
-<h2 id="05a3">Courage → Fearlessness</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Recently I did an entire reading of the entire <em>Meditations</em>, and noted each time a particular theme came up. <em>Fearlessness</em> came up often, <em>like a lot</em>! It came up in a lot of different ways:</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul>
-<li>Not caring what other people think of you</li>
-<li>Not caring if people blame you for things</li>
-<li>Tackling challenging tasks (not fearing them)</li>
-<li>Not fearing the future</li>
-<li>Not even caring whether you are going to die!</li>
-</ul>
-<!-- /wp:list -->
-<!-- wp:paragraph -->
-<p>At one point I think Epictetus asks us, basically, to “<em>fear nothing,</em>” since all un-folding of life is <em>intended</em> and <em>natural</em>!<em> S</em>ince life is going to unfold how it unfolds (either by God or just being the way it is), it’s <em>best</em> to not go out whining and complaining, but <em>fearlessly!</em></p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>I have a mental exercise that helps me ascertain how to <em>fearlessly</em> approach a situation:</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading -->
-<h2 id="8918">Temperance → Detachment</h2>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>Temperance, when you first hear it — it comes off as being cool-headed and patient. These are all good virtues, but <em>how</em> you do that is very hard to discern. In all my studying, I’ve found that the only way to be <em>temperate</em> is to <em>detach from things</em>.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>Here’s an example (from Epictetus) that I love to exemplify this virtue (paraphrased):</p>
-<!-- /wp:paragraph -->
-<!-- wp:quote -->
-<blockquote class="wp-block-quote">
-<p>Life is a banquet. When a platter of delicious food is handed to you, sample it. If you’re waiting for the platter to come to you, do not seek it out, wait for it to come to you. If it never comes, pay no matter to it.</p>
-</blockquote>
-<!-- /wp:quote -->
-<!-- wp:paragraph -->
-<p>I feel like the central theme here is <em>detachment</em>. “<em>Sample it</em>” he says, which seems to imply actually <em>enjoying things</em> (which is awesome right), but done so in moderated way (e.g. <em>sample</em>). Further reading will show that it’s <em>really</em> the concern of <em>attachment</em> to pleasant things that is being disciplined. The gist of <em>most of the Stoics</em> is that if you continually enjoy nice things, you will develop habits and familiarity with them, which could <em>attach</em> you to said external thing — say if it goes away.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>Furthermore, he goes on to instruct that if the platter floats about the room, to not <em>want</em> after it or seek it out. And, even more so, if it never makes its way over to you, or you were accidentally <em>skipped</em>, to pay no matter to it.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>Detach from things: expectations, outcomes, wealth, behaviors, etc. It doesn’t mean don’t expect anything, or not enjoy a wealth. But <em>sample</em> them, moderately and appropriately, and pay no matter if they don’t even come to you.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>Don’t be attached to <em>it, </em>whatever <em>it</em> is.</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p style="text-align: center;">Find truth, serve others, be fearless, and detach!</p>
-<!-- /wp:paragraph -->
-<p>&nbsp;</p>
-]]></content>
-        </item>
+ Am I being Wise? Am I being Just? Am I being Courageous? Am I being Temperate?  But, none of these words have ever really meant much for me.
+          
         
-    </channel>
+        </description>
+    </item>
+    
+  </channel>
 </rss>
