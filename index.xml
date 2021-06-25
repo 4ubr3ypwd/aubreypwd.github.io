@@ -9,7 +9,7 @@
     <description>Recent content on Aubrey Portwood</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright &amp;copy; Aubrey Portwood / &lt;a href=&#34;https://aubreypwd.com/index.xml&#34;&gt;&lt;i class=&#34;im im-radio&#34;&gt;&lt;/i&gt; RSS&lt;/a&gt; / Powered by &lt;a href=&#34;https://https://gohugo.io/&#34;&gt;hugo&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34; target=&#34;_blank&#34;&gt;hello-friend&lt;/a&gt;</copyright>
+    <copyright>Copyright &amp;copy; Aubrey Portwood / &lt;a href=&#34;https://aubreypwd.com/index.xml&#34;&gt;&lt;i class=&#34;im im-radio&#34;&gt;&lt;/i&gt; RSS&lt;/a&gt; / Powered by &lt;a href=&#34;https://gohugo.io/&#34;&gt;hugo&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/panr/hugo-theme-hello-friend&#34; target=&#34;_blank&#34;&gt;hello-friend&lt;/a&gt;</copyright>
     <lastBuildDate>Fri, 25 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://aubreypwd.com/index.xml" rel="self" type="application/rss+xml" />
@@ -31,7 +31,7 @@
         
           So today for #5ftf @WebDevStudios I thought I was going to work on fixing a few things on my fork of rhazdon/hugo-theme-hello-friend-ng and work some of them upstream, but I actually decided to use the panr/hugo-theme-hello-friend theme both of them are based on.
 So here it is! 🙌🏻 — It&amp;rsquo;s basically the same thing but a little easier to configure and work on.
- Brief Life Update I also thought this would be a good chance to post something quickly about how things are going lately.
+Here&amp;rsquo;s how it looked before: Checkout the source →
           
         
         </description>
